@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"tet_goto",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"tet_goto",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

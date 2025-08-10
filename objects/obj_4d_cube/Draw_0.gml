@@ -1,0 +1,1 @@
+draw_sprite_ext(spr_4d_cube,image_index,x,y,scale,scale,image_angle,make_colour_rgb(col,col-15,col-30), image_alpha);

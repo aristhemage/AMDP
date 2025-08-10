@@ -1,0 +1,2 @@
+state = STATES.FOLLOW_PLAYER;
+eyelid_no = EYELIDS.NONE;

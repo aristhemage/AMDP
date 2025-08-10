@@ -1,0 +1,1 @@
+draw_sprite_ext(spr_foot_particles,1,x,y,1,1,image_angle,col,image_alpha)

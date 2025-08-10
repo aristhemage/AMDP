@@ -69,5 +69,11 @@ function Enums(){
 	    ORANGE,
 		ARRAY_LEN
 	}
-
+	
+	enum ARCADE_LEVELS{
+		SHOOT_SPD,
+		SHOOT_SIZE,
+		MAX_HEALTH,
+		HP_BOX_SPAWNRATE,
+	}
 }

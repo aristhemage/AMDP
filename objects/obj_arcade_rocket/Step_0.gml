@@ -52,8 +52,8 @@ if(!leveled_up){
 	// Shooting
 	if(k_shoot){
 		if(shoot_cooldown <= 0){
-			instance_create_depth(x,y+sprite_get_height(spr_arcade_ship)/2,1,obj_arcade_laser,{spd:laser_spd})	
-			shoot_cooldown = shoot_cooldown_int;
+			instance_create_depth(x,y+sprite_get_height(spr_arcade_ship)/2,1,obj_arcade_laser,{spd:laser_spd, image_xscale : max(1,levels[ARCADE_LEVELS.SHOOT_SIZE]/2 + 1), image_yscale : max(1,levels[ARCADE_LEVELS.SHOOT_SIZE]/2 + 1)})	
+			shoot_cooldown = shoot_cooldown_int - levels[ARCADE_LEVELS.SHOOT_SPD] * 3;
 		}
 	}
 	if(shoot_cooldown > 0){
@@ -64,14 +64,14 @@ if(!leveled_up){
 	asteroid_spawner_ramp_timer--;
 	if (asteroid_spawner_ramp_timer <= 0) {
 	    asteroid_spawner_ramp_timer = asteroid_spawner_ramp_timer_int;
-	    asteroid_level++;
+	    difficulty_level++;
 	}
 
 	// Spawn the rocks
 	asteroid_spawner_timer--;
 	if (asteroid_spawner_timer <= 0) {
 	
-	    var spawn_count = max(1, round(asteroid_level / 5));
+	    var spawn_count = max(1, round(difficulty_level / 5));
 	    repeat (spawn_count) {
 	        var spawn_x = irandom_range(arcade_x1.x + 32, arcade_x2.x - 32);
 	        var spawn_y = arcade_x1.y; 
@@ -79,13 +79,13 @@ if(!leveled_up){
 	    }
     
 	    // Clamp spawn rate
-	    asteroid_spawner_timer = max(15, asteroid_spawner_ramp_timer_int - asteroid_level * 5);
+	    asteroid_spawner_timer = max(15, asteroid_spawner_ramp_timer_int - difficulty_level * 5);
 	}
 
 
 	comet_spawner_timer--;
 	if (comet_spawner_timer <= 0) {
-	    var spawn_count = max(1, round(asteroid_level / 5)); 
+	    var spawn_count = max(1, round(difficulty_level / 5)); 
     
 	    repeat (spawn_count) {
 	        var spawn_x = arcade_x1.x;
@@ -94,7 +94,16 @@ if(!leveled_up){
 				instance_create_depth(spawn_x, spawn_y, 1, obj_arcade_comet_spawner);
 	    }
     
-	    comet_spawner_timer = max(30, asteroid_spawner_ramp_timer_int - asteroid_level * 5);
+	    comet_spawner_timer = max(30, asteroid_spawner_ramp_timer_int - difficulty_level * 5);
+	}
+
+	// Spawn the hp box
+	hp_spawner_timer--;
+	if (hp_spawner_timer <= 0) {
+		var spawn_x = irandom_range(arcade_x1.x + 32, arcade_x2.x - 32);
+	    var spawn_y = arcade_x1.y; 
+	    instance_create_depth(spawn_x, spawn_y, 1, obj_arcade_hp_box);
+	    hp_spawner_timer = max(15, 300 - levels[ARCADE_LEVELS.HP_BOX_SPAWNRATE] * 5);
 	}
 
 
@@ -103,6 +112,7 @@ if(!leveled_up){
 	if(xp >= max_xp){
 		level++;
 		xp -= max_xp
+		points_to_spend++;
 		max_xp *= 1.5
 		leveled_up = true;
 	}
@@ -112,9 +122,32 @@ if(!leveled_up){
 		instance_create_depth(arcade_level2.x,arcade_level2.y,-10,obj_arcade_level_up,{level_info: ARCADE_LEVELS.SHOOT_SIZE})	
 		instance_create_depth(arcade_level3.x,arcade_level3.y,-10,obj_arcade_level_up,{level_info: ARCADE_LEVELS.MAX_HEALTH})	
 		instance_create_depth(arcade_level4.x,arcade_level4.y,-10,obj_arcade_level_up,{level_info: ARCADE_LEVELS.HP_BOX_SPAWNRATE})	
+		instance_create_depth(arcade_level_quit.x,arcade_level_quit.y,-10,obj_arcade_level_quit)	
 
 			
 	}
 }
+
+// Getting hit
+var bad = instance_place(x,y,[obj_arcade_asteroid,obj_arcade_comet]);
+
+if(bad != noone && invince_timer <= 0){
+	hp--;
+	invince_timer = 120;
+}
+
+if(invince_timer > 0){
+	invince_timer--;
+}
+
+var good = instance_place(x,y,obj_arcade_hp_box);
+
+if(good != noone){
+	instance_destroy(good);
+	hp = min(hp+1,max_hp);
+}
+
 //Debug
 if keyboard_check(ord("R")){room_restart()}
+
+show_debug_message(levels)

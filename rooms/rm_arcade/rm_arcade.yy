@@ -6,7 +6,6 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_4CE1A5FF","path":"rooms/rm_arcade/rm_arcade.yy",},
     {"name":"arcade_x1","path":"rooms/rm_arcade/rm_arcade.yy",},
     {"name":"arcade_x2","path":"rooms/rm_arcade/rm_arcade.yy",},
     {"name":"inst_263F9A2","path":"rooms/rm_arcade/rm_arcade.yy",},
@@ -15,6 +14,7 @@
     {"name":"arcade_level3","path":"rooms/rm_arcade/rm_arcade.yy",},
     {"name":"arcade_level4","path":"rooms/rm_arcade/rm_arcade.yy",},
     {"name":"arcade_level_quit","path":"rooms/rm_arcade/rm_arcade.yy",},
+    {"name":"inst_4CE1A5FF","path":"rooms/rm_arcade/rm_arcade.yy",},
     {"name":"draw_node_hp","path":"rooms/rm_arcade/rm_arcade.yy",},
   ],
   "isDnd":false,
@@ -31,7 +31,10 @@
         {"$GMRInstance":"v2","%Name":"arcade_level4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"arcade_level4","objectId":{"name":"obj_nodepoint","path":"objects/obj_nodepoint/obj_nodepoint.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":511.0,"y":403.0,},
         {"$GMRInstance":"v2","%Name":"arcade_level_quit","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"arcade_level_quit","objectId":{"name":"obj_nodepoint","path":"objects/obj_nodepoint/obj_nodepoint.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":864.0,"y":384.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"spr_main_bg","path":"sprites/spr_main_bg/spr_main_bg.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
+    {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
+        {"$GMRSpriteGraphic":"v1","%Name":"graphic_75A03DE","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_75A03DE","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":9.0,"scaleY":6.5,"spriteId":{"name":"spr_arcade_background","path":"sprites/spr_arcade_background/spr_arcade_background.yy",},"x":416.0,"y":96.0,},
+      ],"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets_1","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"spr_main_bg","path":"sprites/spr_main_bg/spr_main_bg.yy",},"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "name":"rm_arcade",
   "parent":{

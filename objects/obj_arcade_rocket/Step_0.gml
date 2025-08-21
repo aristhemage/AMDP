@@ -147,6 +147,17 @@ if(good != noone){
 	hp = min(hp+1,max_hp);
 }
 
+
+//Spawn some stars
+	if(star_spawner_timer <= 0){
+		repeat(irandom(3)){
+			instance_create_depth(irandom_range(arcade_x1.x + 20, arcade_x2.x - 20),arcade_x1.y, 1,obj_arcade_star)	
+		}
+		star_spawner_timer = irandom_range(5,10);
+	}else{
+		star_spawner_timer--;	
+	}
+
 //Debug
 if keyboard_check(ord("R")){room_restart()}
 

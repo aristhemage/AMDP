@@ -34,3 +34,5 @@ max_hp= 5;
 invince_timer = 0;
 
 levels = [0,0,0,0];
+
+star_spawner_timer = 120; 

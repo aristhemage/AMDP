@@ -1,0 +1,54 @@
+if(!global.paused){
+	var dir = point_direction(x, y, obj_DC_player.x, obj_DC_player.y);
+
+	if(hp <= 0){
+		scr_fadeOut(0.05)
+		if(!xp_given){
+			obj_DC_player.points += point_amount;
+			instance_create_depth(x,y,1,obj_DC_xp,{amount:xp_amount})	
+			if(irandom(6-obj_DC_player.perks[PERKS.HP_DROP]) <= 1){
+				instance_create_depth(x,y,1,obj_heart);	
+			}
+			xp_given = true;
+		}
+	}else{
+		switch(state){
+			case ENEMY_STATE.FOLLOW_PLAYER:
+				x += lengthdir_x(spd, dir);
+				y += lengthdir_y(spd, dir);
+ 
+			break;
+	
+			case ENEMY_STATE.PREPARE_LEAP:
+				leap_prep_timer--;
+				x += -lengthdir_x(spd/2, leap_angle);
+				y += -lengthdir_y(spd/2, leap_angle);
+				if(leap_prep_timer <= 0){
+					state = ENEMY_STATE.LEAP	
+					leap_timer = 60;
+				}
+		
+			break;
+	
+			case ENEMY_STATE.LEAP:
+				x += lengthdir_x(spd*4, leap_angle);
+				y += lengthdir_y(spd*4, leap_angle);
+				leap_timer--;
+				if(leap_timer <= 0){
+					state = ENEMY_STATE.FOLLOW_PLAYER	
+				}
+			break;
+			case ENEMY_STATE.STUNNED:
+			    stun_timer--;
+			    if(stun_timer <= 0) {
+			        state = ENEMY_STATE.FOLLOW_PLAYER;
+			        stun_timer = 0;
+			    }
+			break;
+		}
+	}
+	image_xscale = x > obj_DC_player.x ? scale:-scale
+	if(stun_timer > 0){
+		state = ENEMY_STATE.STUNNED;
+	}
+}

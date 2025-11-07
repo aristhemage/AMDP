@@ -10,8 +10,8 @@
   "name":"obj_arcade_comet_spawner",
   "overriddenProperties":[],
   "parent":{
-    "name":"Arcade",
-    "path":"folders/Objects/Arcade.yy",
+    "name":"Asteroids",
+    "path":"folders/Objects/Arcade/Asteroids.yy",
   },
   "parentObjectId":null,
   "persistent":false,

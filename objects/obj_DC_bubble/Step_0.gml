@@ -1,0 +1,26 @@
+if(!global.paused){
+	image_xscale = bubble.size;
+	image_yscale = bubble.size;
+	x += lengthdir_x(bubble.spd,angle)
+	y += lengthdir_y(bubble.spd,angle)
+
+	bubble.life--;
+	if(bubble.life <= 0){
+		scr_fadeOut(0.05)
+	}
+
+	var bad = instance_place(x,y,p_DC_bad);
+
+if (bad != noone && image_alpha >= 1) {
+    if (!array_contains(hit_list,bad.id)) {
+        bad.hp -= bubble.damage;
+        bubble.pierce--;
+        hit_list[array_length(hit_list)+1] = bad.id
+		bad.stun_timer = obj_DC_player.perks[PERKS.BUBBLE_STUN]*60; 
+    }
+}
+		if(bubble.pierce <= 0){
+			scr_fadeOut(0.05)	
+		}
+}
+	

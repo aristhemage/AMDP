@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_arcade_machine",
+  "%Name":"p_platform",
   "eventList":[],
   "managed":true,
-  "name":"obj_arcade_machine",
+  "name":"p_platform",
   "overriddenProperties":[],
   "parent":{
-    "name":"Arcade",
-    "path":"folders/Objects/Arcade.yy",
+    "name":"Level Building",
+    "path":"folders/Objects/Level Building.yy",
   },
-  "parentObjectId":{
-    "name":"p_platform",
-    "path":"objects/p_platform/p_platform.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_arcade_machine",
-    "path":"sprites/spr_arcade_machine/spr_arcade_machine.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

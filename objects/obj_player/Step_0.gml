@@ -51,6 +51,15 @@ if (key_left && !place_meeting(x - h_spd, y, p_wall)) {
 // Check if on the ground
 var on_ground = place_meeting(x, y + 1 * sign(grav), p_wall) || place_meeting(x,y+1 * sign(grav), obj_pull_box);
 
+// Check for platforms
+var platform = instance_place(x, y + 1 * sign(grav) + v_spd, p_platform);
+if(platform != noone){
+	if(platform.bbox_top > obj_player.bbox_bottom){	
+		on_ground = true;	
+		v_spd = 0;
+	}
+}
+
 // Coyote time
 if (on_ground) {
     coyote_timer = coyote_time_max;

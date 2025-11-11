@@ -86,7 +86,11 @@ if (cutscene_active) {
                     current_action += 1;
                 }
                 break;
-			
+			 case ACTION.WAIT_FOR_VAR_GREATER:
+                if (variable_instance_get(action.object, action.variable) >= action.value) {
+                    current_action += 1;
+                }
+                break;	
 			//Create an object on the Instances layer
 		    case ACTION.CREATE_OBJECT:
 		        instance_create_depth(action.x, action.y, 1, action.obj,action.data);

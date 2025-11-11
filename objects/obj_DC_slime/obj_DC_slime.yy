@@ -13,7 +13,10 @@
     "name":"Enemies",
     "path":"folders/Objects/Arcade/Damp Caves/Enemies.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"p_DC_bad",
+    "path":"objects/p_DC_bad/p_DC_bad.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

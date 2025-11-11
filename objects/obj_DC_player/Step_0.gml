@@ -66,7 +66,7 @@ if(!global.paused){
 	}
 	
 	//Getting hit
-	var enemy = instance_place(x,y,[p_bad,obj_DC_mushroom_cloud])
+	var enemy = instance_place(x,y,[p_DC_bad,obj_DC_mushroom_cloud])
 	if(enemy != noone){
 		if(invince_timer <= 0){
 			invince_timer = 80;
@@ -85,7 +85,7 @@ if(!global.paused){
 	// Dying
 	if(hp <= 0){
 		global.paused = true;
-		obj_camera.game_over = true;
+		obj_DC_camera.game_over = true;
 	}
 
 }
@@ -95,7 +95,7 @@ if(level_up && !level_up_setup){
 		var cutscene = 
 		[
 			action_create_object(obj_upgrade_bg,obj_DC_player.x,obj_DC_player.y),
-			action_wait_for_var_greater(obj_camera, "xp_y_offset", obj_camera.xp_y_offset_goal),
+			action_wait_for_var_greater(obj_DC_camera, "xp_y_offset", obj_DC_camera.xp_y_offset_goal),
 			action_create_object(obj_DC_perk_spawner,obj_DC_player.x,obj_DC_player.y),
 			
 

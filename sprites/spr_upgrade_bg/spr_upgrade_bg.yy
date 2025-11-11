@@ -45,7 +45,7 @@
   "origin":3,
   "parent":{
     "name":"Upgrades",
-    "path":"folders/Sprites/Upgrades.yy",
+    "path":"folders/Sprites/Arcade/Upgrades.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

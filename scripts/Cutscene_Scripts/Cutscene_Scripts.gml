@@ -55,6 +55,16 @@ function action_wait_for_var(object, variable, value) {
     };
 }
 
+function action_wait_for_var_greater(object, variable, value) {
+    return {
+        type: ACTION.WAIT_FOR_VAR_GREATER,
+		object: object,
+        variable: variable,
+        value: value
+    };
+}
+
+
 function action_display_text(text, wait_for_button) {
     return {
         type: ACTION.DISPLAY_TEXT,

@@ -9,7 +9,7 @@ var _y = start_y + (upgrade_num * spacing);
 draw_sprite(spr_upgrade_icon,0,_x,_y)
 
 
-
+draw_set_font(fnt_game);
 txt = ""; 
 desc = "";
 switch (perk) {
@@ -116,3 +116,4 @@ if (mouse_in_sprite_GUI(spr_upgrade_icon, _x, _y)) {
 	}
 	//draw_sprite_ext(spr_upgrade_desc,0,700,700,20,3,0,c_white,1)
 }
+

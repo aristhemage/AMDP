@@ -7,7 +7,7 @@ if(!global.paused){
 			obj_DC_player.points += point_amount;
 			instance_create_depth(x,y,1,obj_DC_xp,{amount:xp_amount})	
 			if(irandom(6-obj_DC_player.perks[PERKS.HP_DROP]) <= 1){
-				instance_create_depth(x,y,1,obj_heart);	
+				instance_create_depth(x,y,1,obj_DC_heart);	
 			}
 			xp_given = true;
 		}

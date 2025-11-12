@@ -15,4 +15,4 @@ draw_sprite_ext(spr_player,0,x,y,x_scale_vis,y_scale_vis,image_angle,c_white,ima
 	 	y_scale_vis = 1;	
 	} 
 	
-draw_text(x,y-64,sign(v_spd) * sign(grav))
+// draw_text(x,y-64,sign(v_spd) * sign(grav))

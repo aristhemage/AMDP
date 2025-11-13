@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Projectiles",
-    "path":"folders/Sprites/Main Game/Projectiles.yy",
+    "path":"folders/Sprites/Damp Caves/Projectiles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

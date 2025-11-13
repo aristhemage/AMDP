@@ -25,8 +25,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"spr_terraign",
-    "path":"sprites/spr_terraign/spr_terraign.yy",
+    "name":"spr_terraign_core",
+    "path":"sprites/spr_terraign_core/spr_terraign_core.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{

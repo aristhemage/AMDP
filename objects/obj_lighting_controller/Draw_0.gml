@@ -38,6 +38,12 @@ with (obj_tet) {
         5.0, 5.0, 0, c_white, 1);
 }
 
+with (obj_laser) {
+    draw_sprite_ext(spr_light, 0,
+        x - _cx, y - _cy + 64 * image_yscale,
+        5.0, 3.0 * image_yscale, 0, c_white, 1);
+}
+
 
 // 5. Restore blend mode
 gpu_set_blendmode(bm_normal);

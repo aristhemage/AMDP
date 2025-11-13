@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"Slime",
-    "path":"folders/Sprites/Main Game/Enemies/Slime.yy",
+    "path":"folders/Sprites/Damp Caves/Enemies/Slime.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

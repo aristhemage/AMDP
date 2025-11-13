@@ -1,3 +1,4 @@
+// Not create, as I want to load it LAST
 with(obj_wall_basic){
     var tile_sz = 32;
     var rand_chance = 10;

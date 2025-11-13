@@ -31,7 +31,7 @@
   "origin":4,
   "parent":{
     "name":"Enemies",
-    "path":"folders/Sprites/Main Game/Enemies.yy",
+    "path":"folders/Sprites/Damp Caves/Enemies.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

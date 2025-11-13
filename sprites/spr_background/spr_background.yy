@@ -45,7 +45,7 @@
   "origin":4,
   "parent":{
     "name":"GUI",
-    "path":"folders/Sprites/Main Game/GUI.yy",
+    "path":"folders/Sprites/Damp Caves/GUI.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

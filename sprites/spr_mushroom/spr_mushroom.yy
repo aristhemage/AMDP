@@ -29,7 +29,7 @@
   "origin":4,
   "parent":{
     "name":"Mushroom",
-    "path":"folders/Sprites/Main Game/Enemies/Mushroom.yy",
+    "path":"folders/Sprites/Damp Caves/Enemies/Mushroom.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

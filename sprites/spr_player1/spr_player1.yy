@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Main Game",
-    "path":"folders/Sprites/Main Game.yy",
+    "name":"Damp Caves",
+    "path":"folders/Sprites/Damp Caves.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

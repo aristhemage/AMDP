@@ -13,7 +13,7 @@ var _h = camera_get_view_height(view_camera[0]);
 
 surface_set_target(surf_light);
 draw_set_colour(c_black);
-draw_set_alpha(0.99);       
+draw_set_alpha(0.985);       
 draw_rectangle(0, 0, _w, _h, false);
 
 // Switch to subtract blend mode for light holes
@@ -35,7 +35,7 @@ with (obj_lamp) {
 with (obj_tet) {
     draw_sprite_ext(spr_light, 0,
         x - _cx, y - _cy,
-        3.0, 3.0, 0, c_white, 1);
+        5.0, 5.0, 0, c_white, 1);
 }
 
 

@@ -52,6 +52,7 @@
     {"name":"obj_arcade_machine","order":13,"path":"objects/obj_arcade_machine/obj_arcade_machine.yy",},
     {"name":"obj_arcade_rocket","order":8,"path":"objects/obj_arcade_rocket/obj_arcade_rocket.yy",},
     {"name":"obj_arcade_star","order":9,"path":"objects/obj_arcade_star/obj_arcade_star.yy",},
+    {"name":"obj_autotiler","order":12,"path":"objects/obj_autotiler/obj_autotiler.yy",},
     {"name":"obj_bean_bag_glitchy","order":16,"path":"objects/obj_bean_bag_glitchy/obj_bean_bag_glitchy.yy",},
     {"name":"obj_box_particles","order":8,"path":"objects/obj_box_particles/obj_box_particles.yy",},
     {"name":"obj_box_spawner","order":7,"path":"objects/obj_box_spawner/obj_box_spawner.yy",},
@@ -103,7 +104,6 @@
     {"name":"obj_upgrade_bg","order":2,"path":"objects/obj_upgrade_bg/obj_upgrade_bg.yy",},
     {"name":"obj_wall_basic","order":1,"path":"objects/obj_wall_basic/obj_wall_basic.yy",},
     {"name":"obj_warning","order":5,"path":"objects/obj_warning/obj_warning.yy",},
-    {"name":"Object72","order":12,"path":"objects/Object72/Object72.yy",},
     {"name":"p_bad","order":4,"path":"objects/p_bad/p_bad.yy",},
     {"name":"p_platform","order":19,"path":"objects/p_platform/p_platform.yy",},
     {"name":"rm_arcade","order":9,"path":"rooms/rm_arcade/rm_arcade.yy",},
@@ -201,5 +201,6 @@
     {"name":"sTetEye","order":1,"path":"sprites/sTetEye/sTetEye.yy",},
     {"name":"sTetEylid","order":2,"path":"sprites/sTetEylid/sTetEylid.yy",},
     {"name":"sTetLight","order":3,"path":"sprites/sTetLight/sTetLight.yy",},
+    {"name":"tile_levels_2","order":1,"path":"tilesets/tile_levels_2/tile_levels_2.yy",},
   ],
 }

@@ -1,17 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_autotiler",
+  "%Name":"obj_spark_warning",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_autotiler",
+  "name":"obj_spark_warning",
   "overriddenProperties":[],
   "parent":{
-    "name":"Camera",
-    "path":"folders/Objects/Camera.yy",
+    "name":"Core",
+    "path":"folders/Objects/Level Building/Core.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_spark_warning",
+    "path":"sprites/spr_spark_warning/spr_spark_warning.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

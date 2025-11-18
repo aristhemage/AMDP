@@ -5,7 +5,7 @@ if(place_meeting(x,y,p_wall) && !place_meeting(x,y,obj_turret) && !place_meeting
 }
 
 if(fade){
-	mask_index = -1;
+	ignore_collsion = true;
 	scr_fadeOut(0.3);		
 }
 

@@ -4,7 +4,8 @@ if(place_meeting(x,y,p_wall)){
 }
 
 if(dead){
-	scr_fadeOut(0.05);		
+	scr_fadeOut(0.05);	
+	ignore_collsion = true;
 }else{
 	y+= 16;	
 }

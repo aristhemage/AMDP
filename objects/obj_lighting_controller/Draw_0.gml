@@ -50,6 +50,12 @@ with (obj_spark) {
         5.0, 3.0 * image_yscale, 0, c_white, image_alpha);
 
 }
+with (obj_spark_warning) {
+    draw_sprite_ext(spr_light, 0,
+        x - _cx, y - _cy * image_yscale,
+        2.0, 2.0 * image_yscale, 0, c_white, image_alpha);
+
+}
 
 
 // 5. Restore blend mode
@@ -59,3 +65,7 @@ gpu_set_blendmode(bm_normal);
 surface_reset_target();
 draw_surface(surf_light, _cx, _cy);
 draw_set_alpha(1);
+
+with(obj_text_bubble){
+	event_perform(ev_draw, 0);
+}

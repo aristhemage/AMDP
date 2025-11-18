@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_spark_temp",
-    "path":"sprites/spr_spark_temp/spr_spark_temp.yy",
+    "name":"spr_spark",
+    "path":"sprites/spr_spark/spr_spark.yy",
   },
   "spriteMaskId":null,
   "visible":true,

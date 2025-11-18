@@ -158,7 +158,8 @@ if(grav_block != noone){
 
 ///Deaths
 var bad = instance_place(x,y,p_bad);
-if(bad != noone){
+if(bad != noone && !debug_invince){
+	if(!bad.ignore_collsion){
 		instance_create_depth(x,y,1,obj_dead_player);
 		x_scale_vis = 0;
 		y_scale_vis = 0;
@@ -176,6 +177,7 @@ if(bad != noone){
 			v_spd = 0;
 			h_spd = 0;
 		}
+	}
 	
 }
 

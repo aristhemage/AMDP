@@ -41,5 +41,6 @@ pressure_plates = array_create(PRESSURE_PLATES.ARRAY_LEN,0) //For Pressure Plate
 
 foot_particle_timer = 3;
 
+debug_invince = true;
 depth = -100
 

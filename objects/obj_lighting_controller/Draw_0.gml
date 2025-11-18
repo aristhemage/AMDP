@@ -44,6 +44,13 @@ with (obj_laser) {
         5.0, 3.0 * image_yscale, 0, c_white, 1);
 }
 
+with (obj_spark) {
+    draw_sprite_ext(spr_light, 0,
+        x - _cx, y - _cy + 64 * image_yscale,
+        5.0, 3.0 * image_yscale, 0, c_white, image_alpha);
+
+}
+
 
 // 5. Restore blend mode
 gpu_set_blendmode(bm_normal);

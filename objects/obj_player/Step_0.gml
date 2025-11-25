@@ -158,18 +158,18 @@ if (key_right && place_meeting(x + h_spd + move_speed, y, p_wall) && sign(v_spd)
 }	
 
 
-// Dash
-if(key_dash && !on_ground){
-	var dash_dir = key_right ? 1 : -1
-	while(dash_distance < 128){
-		x += 1 * (dash_dir)
-		dash_distance++;
-	}
-	can_dash = false;
-}
+// Dash (Work on later)
+//if(key_dash && !on_ground){
+//	var dash_dir = key_right ? 1 : -1
+//	while(dash_distance < 128){
+//		x += 1 * (dash_dir)
+//		dash_distance++;
+//	}
+//	can_dash = false;
+//} 
 
 if(on_ground){
-	can_dash = true;	
+	//can_dash = true;	
 	dash_distance = 0;
 }
 // Gravity block

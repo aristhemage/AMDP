@@ -10,15 +10,21 @@ if(state != STATES.CUTSCENE){
 		key_jump = 0;
 		
 	if(can_jetpack)
-		 key_jetpack = keyboard_check(vk_up) || keyboard_check(ord("W"));
+		key_jetpack = keyboard_check(vk_up) || keyboard_check(ord("W")); // Not a var due to use outside of scope
 	else
 		key_jetpack = 0;
 	var key_sprint = keyboard_check(vk_shift);
+	
+	if(can_dash)
+		var key_dash = keyboard_check(vk_control);	
+	else
+		key_dash = 0;
 }else{
 	var key_left = 0;
 	var key_right = 0;
 	var key_jump = 0;
 	var key_sprint = 0;
+	var key_dash = 0;
 	key_jetpack = 0;
 }
 // Apply h_spd and modifyers
@@ -135,13 +141,44 @@ if (!place_meeting(x, y + v_spd, p_wall) && !place_meeting(x, y + v_spd, obj_pul
     v_spd = 0;
 }
 
+// Sliding on walls
+var sliding_on_wall = false;
+if (key_right && place_meeting(x + h_spd + move_speed, y, p_wall) && sign(v_spd) == 1 * sign(grav)) {
+    grav = 0.075 * sign(grav);	
+	sliding_on_wall = true;
+	// Create particles below
+}else{
+	if (key_left && place_meeting(x - h_spd - move_speed, y, p_wall) && sign(v_spd) == 1 * sign(grav))  {
+	    grav = 0.075 * sign(grav);	
+		sliding_on_wall = true;
+	}else{
+			grav = 0.4 * sign(grav);
+			sliding_on_wall = false;	
+	}
+}	
+
+
+// Dash
+if(key_dash && !on_ground){
+	var dash_dir = key_right ? 1 : -1
+	while(dash_distance < 128){
+		x += 1 * (dash_dir)
+		dash_distance++;
+	}
+	can_dash = false;
+}
+
+if(on_ground){
+	can_dash = true;	
+	dash_distance = 0;
+}
 // Gravity block
 var grav_block = instance_place(x,y+v_spd,obj_gravity_wall);
 
 if(grav_block != noone){
 	if(grav_block.touched != true){
 		grav = -grav;
-		grav_flip_anim = true;
+		grav_flip_anim = true; // Unused for now
 		grav_block.touched = true;
 	}
 	
@@ -182,13 +219,20 @@ if(bad != noone && !debug_invince){
 }
 
 // Particles
-	if(on_ground && moving ){
+	if(on_ground && moving){
 		foot_particle_timer--;
 		if(foot_particle_timer <= 0){
 			//var ground_color = draw_getpixel(x, y + sprite_height / 2 + 1);
 			instance_create_depth(x,y-3,1,obj_foot_particles,{v_vel : -v_spd, col: c_gray})	
 			foot_particle_timer = 3;
 		}
+	}
+	if(sliding_on_wall){
+		foot_particle_timer--;
+		if(foot_particle_timer <= 0){
+			instance_create_depth(x + (key_right ? 40: -40),y-16,1,obj_foot_particles,{v_vel : -v_spd, col: c_gray})	
+			foot_particle_timer = 3;
+		}	
 	}
 
 //Debug

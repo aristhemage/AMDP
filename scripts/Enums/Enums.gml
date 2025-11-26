@@ -68,6 +68,7 @@ function Enums(){
 	    IDLE,
 	    MOVING,
 	    JUMPING,
+		DASHING,
 	    CUTSCENE,
 	    FOLLOW_PLAYER
 	}

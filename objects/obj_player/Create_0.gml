@@ -43,7 +43,11 @@ foot_particle_timer = 3;
 
 can_dash = true;
 dash_distance = 0;
+dash_dir = 0;
+dashing = false
+dashing_unlocked = false;
 
 debug_invince = false;
 depth = -100
+
 

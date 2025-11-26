@@ -15,10 +15,11 @@ if(state != STATES.CUTSCENE){
 		key_jetpack = 0;
 	var key_sprint = keyboard_check(vk_shift);
 	
-	if(can_dash)
+	if(can_dash && dashing_unlocked){
 		var key_dash = keyboard_check(vk_control);	
-	else
-		key_dash = 0;
+	}else{
+		var key_dash = 0;
+	}
 }else{
 	var key_left = 0;
 	var key_right = 0;
@@ -43,7 +44,7 @@ if (abs(h_spd - target_speed) < 0.05) {
 
 
 
-var moving = false
+moving = false
 // Horizontal movement
 if (key_right && !place_meeting(x + h_spd, y, p_wall)) {
     x += h_spd;	
@@ -158,20 +159,40 @@ if (key_right && place_meeting(x + h_spd + move_speed, y, p_wall) && sign(v_spd)
 }	
 
 
-// Dash (Work on later)
-//if(key_dash && !on_ground){
-//	var dash_dir = key_right ? 1 : -1
-//	while(dash_distance < 128){
-//		x += 1 * (dash_dir)
-//		dash_distance++;
-//	}
-//	can_dash = false;
-//} 
+// Dash 
+if(key_dash && !on_ground && !dashing){
+	// If moving, check if right key is pressed,
+	//if so, direction is right, if not, its left
+	dash_dir = moving ? (key_right == 1 ? 1 : -1) : 0; 
+	dashing = true;
+} 
+
+if(dashing){
+	// Make sure player never hits a wall
+	if(dash_distance < 12){
+		dashing = true;
+		if(!place_meeting(x + 1 * dash_dir,y, p_wall)){
+			x += 8 * (dash_dir)
+			v_spd = 0;
+		}else{
+			dash_distance+= 12	
+		}
+		dash_distance++;
+	}else{
+		dashing = false;
+		can_dash = false;
+		dash_dir = 0;
+
+	}
+}
 
 if(on_ground){
-	//can_dash = true;	
+	can_dash = true;	
+	dashing = false;
 	dash_distance = 0;
 }
+
+
 // Gravity block
 var grav_block = instance_place(x,y+v_spd,obj_gravity_wall);
 
@@ -205,6 +226,9 @@ if(bad != noone && !debug_invince){
 		y = respawn_y;
 		h_spd = 0;
 		v_spd = 0;
+		dashing = false;
+		can_dash = true;
+		dash_dir = 0;
 		with(obj_box){
 			x = int_x;
 			y = int_y;
@@ -235,6 +259,15 @@ if(bad != noone && !debug_invince){
 		}	
 	}
 
+// If ever stuck within a wall
+var wall = instance_place(x,y,p_wall);
+if(wall != noone){
+	if (x > wall.x){
+		x++;	
+	}else{
+		x--;	
+	}
+}
 //Debug
 if keyboard_check(ord("R")){room_restart()}
 if keyboard_check(ord("L")){room_goto(rm_level_select)}

@@ -45,7 +45,7 @@ can_dash = true;
 dash_distance = 0;
 dash_dir = 0;
 dashing = false
-dashing_unlocked = false;
+dashing_unlocked = true;
 
 debug_invince = false;
 depth = -100

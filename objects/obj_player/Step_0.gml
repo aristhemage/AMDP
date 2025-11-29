@@ -169,7 +169,7 @@ if(key_dash && !on_ground && !dashing){
 
 if(dashing){
 	// Make sure player never hits a wall
-	if(dash_distance < 12){
+	if(dash_distance < 14){
 		dashing = true;
 		if(!place_meeting(x + 1 * dash_dir,y, p_wall)){
 			x += 8 * (dash_dir)

@@ -144,14 +144,20 @@ if (!place_meeting(x, y + v_spd, p_wall) && !place_meeting(x, y + v_spd, obj_pul
 
 // Sliding on walls
 var sliding_on_wall = false;
-if (key_right && place_meeting(x + h_spd + move_speed, y, p_wall) && sign(v_spd) == 1 * sign(grav)) {
-    grav = 0.075 * sign(grav);	
-	sliding_on_wall = true;
+var wall_right = instance_place(x + h_spd + move_speed, y, p_wall);
+if (key_right && wall_right != noone  && sign(v_spd) == 1 * sign(grav)) {
+   if(wall_right.object_index != obj_box){
+		grav = 0.075 * sign(grav);	
+		sliding_on_wall = true;
+   }
 	// Create particles below
 }else{
-	if (key_left && place_meeting(x - h_spd - move_speed, y, p_wall) && sign(v_spd) == 1 * sign(grav))  {
-	    grav = 0.075 * sign(grav);	
-		sliding_on_wall = true;
+	var wall_left = instance_place(x - h_spd - move_speed, y, p_wall)
+	if (key_left && wall_left != noone && sign(v_spd) == 1 * sign(grav))  {
+	   if(wall_left.object_index != obj_box){
+			grav = 0.075 * sign(grav);	
+			sliding_on_wall = true;
+	   }
 	}else{
 			grav = 0.4 * sign(grav);
 			sliding_on_wall = false;	

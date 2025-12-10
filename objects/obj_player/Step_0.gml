@@ -71,7 +71,7 @@ if(platform != noone){
 if (on_ground) {
     coyote_timer = coyote_time_max;
 	jetpack_fuel= jetpack_fuel_max;
-	jetpack_power = 1;
+	jetpack_power = 2;
 } else if (coyote_timer > 0) {
     coyote_timer--;
 }
@@ -126,7 +126,7 @@ if(key_jetpack && jetpack_fuel > 0){
 	if(sign(v_spd) = -1 && jetpack_power > 0){ jetpack_power = 0;}
 	v_spd = jetpack_power * sign(grav);
 	
-	if(jetpack_power > jetpack_power_max){jetpack_power -= 0.05;}
+	if(jetpack_power > jetpack_power_max){jetpack_power -= 0.1;}
 	jetpack_fuel--;
 }
 

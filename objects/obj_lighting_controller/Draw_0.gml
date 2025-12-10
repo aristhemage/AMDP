@@ -57,6 +57,11 @@ with (obj_spark_warning) {
 
 }
 
+with (obj_core_4_baby) {
+    draw_sprite_ext(spr_light, 0,
+        x - _cx, y - _cy-32,
+        3.0, 3.0, 0, c_white, 1);
+}
 
 // 5. Restore blend mode
 gpu_set_blendmode(bm_normal);

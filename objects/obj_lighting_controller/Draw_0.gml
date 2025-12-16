@@ -69,6 +69,23 @@ with (obj_core_4_boss) {
         6.0, 6.0, 0, c_white, 1);
 }
 
+with(obj_core_4_spike){
+	  draw_sprite_ext(spr_light, 0,
+        x - _cx, y - _cy,
+        2.0, 2.0, 0, c_white, 1);	
+}
+
+with(obj_core_4_target){
+	  draw_sprite_ext(spr_light, 0,
+        x - _cx, y - _cy,
+        2.0, 2.0, 0, c_white, 1);	
+}
+with(obj_core_4_laser){
+	  draw_sprite_ext(spr_light, 0,
+        x - _cx, y - _cy,
+        2.0, 4.0, 0, c_white, 1);	
+}
+
 // 5. Restore blend mode
 gpu_set_blendmode(bm_normal);
 

@@ -1,18 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"obj_core_4_boss",
+  "%Name":"obj_core_4_spike",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_core_4_boss",
+  "name":"obj_core_4_spike",
   "overriddenProperties":[],
   "parent":{
     "name":"Boss",
     "path":"folders/Objects/Level Building/Core/Boss.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"p_wall",
+    "path":"objects/p_wall/p_wall.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_core_boss_base",
-    "path":"sprites/spr_core_boss_base/spr_core_boss_base.yy",
+    "name":"spr_spike",
+    "path":"sprites/spr_spike/spr_spike.yy",
   },
   "spriteMaskId":null,
   "visible":true,

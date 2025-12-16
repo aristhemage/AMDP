@@ -224,6 +224,12 @@ if(grav_block != noone){
 var bad = instance_place(x,y,p_bad);
 if(bad != noone && !debug_invince){
 	if(!bad.ignore_collsion){
+		dead = true;
+	}
+	
+}
+
+if(dead){
 		instance_create_depth(x,y,1,obj_dead_player);
 		x_scale_vis = 0;
 		y_scale_vis = 0;
@@ -235,6 +241,7 @@ if(bad != noone && !debug_invince){
 		dashing = false;
 		can_dash = true;
 		dash_dir = 0;
+		// Boxes
 		with(obj_box){
 			x = int_x;
 			y = int_y;
@@ -243,9 +250,19 @@ if(bad != noone && !debug_invince){
 			grav = 0.4
 			v_spd = 0;
 			h_spd = 0;
+		}	
+		
+		//Core 4 Fight
+		with(obj_core_4_spike){
+			instance_destroy();	
 		}
-	}
-	
+		with(obj_core_4_target){
+			instance_destroy();	
+		}
+		with(obj_core_4_laser){
+			instance_destroy();	
+		}
+		dead = false;
 }
 
 // Particles

@@ -1,0 +1,1 @@
+//draw_sprite(spr_4d_cube,0,x-128,y)

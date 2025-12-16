@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_core_4_boss",
+  "%Name":"obj_core_4_laser",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_core_4_boss",
+  "name":"obj_core_4_laser",
   "overriddenProperties":[],
   "parent":{
     "name":"Boss",
     "path":"folders/Objects/Level Building/Core/Boss.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"p_bad",
+    "path":"objects/p_bad/p_bad.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_core_boss_base",
-    "path":"sprites/spr_core_boss_base/spr_core_boss_base.yy",
+    "name":"spr_boss_laser",
+    "path":"sprites/spr_boss_laser/spr_boss_laser.yy",
   },
   "spriteMaskId":null,
   "visible":true,

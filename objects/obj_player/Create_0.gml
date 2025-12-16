@@ -11,6 +11,7 @@ grav = 0.4;
 grav_flip_anim = false;
 max_fall_speed = 12;
 
+dead = false
 
 // Coyote time and jump buffer 
 coyote_time_max = 10; 
@@ -47,7 +48,7 @@ dash_dir = 0;
 dashing = false
 dashing_unlocked = true;
 
-debug_invince = true;
+debug_invince = false;
 depth = -100
 
 

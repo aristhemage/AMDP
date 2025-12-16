@@ -1,12 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_core_4_boss",
+  "%Name":"obj_core_4_target",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_core_4_boss",
+  "name":"obj_core_4_target",
   "overriddenProperties":[],
   "parent":{
     "name":"Boss",
@@ -31,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_core_boss_base",
-    "path":"sprites/spr_core_boss_base/spr_core_boss_base.yy",
+    "name":"spr_core_boss_target",
+    "path":"sprites/spr_core_boss_target/spr_core_boss_target.yy",
   },
   "spriteMaskId":null,
   "visible":true,

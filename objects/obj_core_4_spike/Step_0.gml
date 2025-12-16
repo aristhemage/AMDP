@@ -40,6 +40,6 @@ if(sign(y_vel) == 1){
 
 
 // Kill player on contact from below
-if(distance_to_object(obj_player) < 1 && y <= obj_player.y){
+if(distance_to_object(obj_player) < 1 && y <= obj_player.y && !obj_player.debug_invince){
 	obj_player.dead = true;	
 }

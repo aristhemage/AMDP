@@ -6,8 +6,11 @@ var py = obj_player.y;
 var boss = instance_nearest(px, py, obj_core_4_boss);
 
 // Move master to that boss
-if (boss != noone)
-{
+if (boss != noone){
     x = boss.x;
     y = boss.y;
+}
+
+if(big_laser){
+	big_laser_timer++;	
 }

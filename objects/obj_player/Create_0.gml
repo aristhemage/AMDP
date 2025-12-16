@@ -48,7 +48,7 @@ dash_dir = 0;
 dashing = false
 dashing_unlocked = true;
 
-debug_invince = false;
+debug_invince = true;
 depth = -100
 
 

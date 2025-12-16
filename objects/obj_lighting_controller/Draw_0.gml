@@ -85,6 +85,11 @@ with(obj_core_4_laser){
         x - _cx, y - _cy,
         2.0, 4.0, 0, c_white, 1);	
 }
+with(obj_core_4_big_laser){
+	  draw_sprite_ext(spr_light, 0,
+        x - _cx, y - _cy,
+        6.0, 1.0, 0, c_white, 1);	
+}
 
 // 5. Restore blend mode
 gpu_set_blendmode(bm_normal);

@@ -14,3 +14,12 @@ if (boss != noone){
 if(big_laser){
 	big_laser_timer++;	
 }
+
+
+if(start_battle){
+alarm[0] = 60;
+alarm[1] = 30;
+alarm[2] = 90;
+
+start_battle = false;	
+}

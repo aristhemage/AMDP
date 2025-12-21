@@ -46,9 +46,9 @@ can_dash = true;
 dash_distance = 0;
 dash_dir = 0;
 dashing = false
-dashing_unlocked = true;
+dashing_unlocked = (room == rm_level_core_4)? true: false;
 
-debug_invince = true;
+debug_invince = false;
 depth = -100
 
 

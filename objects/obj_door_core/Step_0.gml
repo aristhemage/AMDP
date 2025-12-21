@@ -4,7 +4,7 @@ if(place_meeting(x,y,obj_player) && keyboard_check_released(vk_enter) && unlocke
 		var actions = [
 		    action_set_var(obj_fade,"fade",FADE.IN),
 			action_wait_for_var(obj_fade,"alpha",1),
-			action_goto_room(rm_level_select)
+			action_goto_room(obj_door_core.leads_to)
 		];
 		
 		start_cutscene(actions)

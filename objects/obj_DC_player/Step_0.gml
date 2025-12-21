@@ -114,12 +114,17 @@ if(level_up && !level_up_setup){
 
 // Debug
 
-if(keyboard_check_released(ord("L"))){
-	xp = max_xp	
-}
+//if(keyboard_check_released(ord("L"))){
+//	xp = max_xp	
+//}
 
 if(hp <= 0){
 	if(keyboard_check(ord("R"))){
-		game_restart();	
+		room_restart();	
 	}
 }
+
+if(keyboard_check(vk_escape)){
+	room_goto(rm_level_tet_room);	
+}
+

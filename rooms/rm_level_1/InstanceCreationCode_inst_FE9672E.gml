@@ -18,7 +18,7 @@ function cutscene(){
 			action_wait_for_object_destroy(obj_text_bubble),
 			
 			action_set_tet(EYELIDS.MAD,c_red,STATES.IDLE),
-			action_create_tet_bubble(["I'm not explaining this feature", "People wine when it's not in my levels so they must know what they do"] ),
+			action_create_tet_bubble(["I'm not explaining this feature", "People whine when it's not in my levels so they must know what they do"] ),
 			action_wait_for_object_destroy(obj_text_bubble),
 			
 			action_set_tet(EYELIDS.SKEPTICAL,c_blue,STATES.IDLE),

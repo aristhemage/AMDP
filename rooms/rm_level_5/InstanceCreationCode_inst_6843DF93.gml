@@ -2,7 +2,7 @@ function cutscene(){
 	with(obj_cutscene_master){
 		var actions = [
 			action_set_tet(EYELIDS.HAPPY, c_green,STATES.FOLLOW_PLAYER),
-			action_wait_time(10),
+			action_wait_time(7),
 			action_set_tet(EYELIDS.SKEPTICAL, c_yellow,STATES.FOLLOW_PLAYER),
 			action_create_tet_bubble(["Uhh... you're supposed to leave now. Go on. Exit's that way... Hello? Are you glitched?"]),
 			action_wait_for_object_destroy(obj_text_bubble),

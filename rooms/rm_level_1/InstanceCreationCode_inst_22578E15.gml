@@ -5,7 +5,7 @@ function cutscene(){
 			action_set_var(obj_player,"can_jump",true),
 			
 			action_set_tet(EYELIDS.NONE,c_yellow),
-		    action_create_object(obj_text_bubble,obj_tet.x + obj_tet.sprite_width/2,obj_tet.y- obj_tet.sprite_height,{follow: obj_tet,txtSpd: 1 , isNext: true, txt: [multiline_string("Whoops!"),multiline_string("I'm sorry, it's been a while and I normally just float..."),multiline_string("The jumping ability was taking up too much space in memory"),multiline_string("So I disabled it.")]}),
+		    action_create_object(obj_text_bubble,obj_tet.x + obj_tet.sprite_width/2,obj_tet.y- obj_tet.sprite_height,{follow: obj_tet,txtSpd: 1 , isNext: true, txt: [multiline_string("Whoops!"),multiline_string("I'm sorry, it's been a while and I normally just float..."),multiline_string("The jumping ability was taking up too much space in memory"),multiline_string("So I disabled it."), multiline_string("Good opprotunity to show off the death count though! Look at the top left.")]}),
 			action_wait_for_object_destroy(obj_text_bubble),
 			
 			action_set_tet(EYELIDS.MAD,c_green),

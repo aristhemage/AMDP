@@ -17,6 +17,7 @@ function Enums(){
 		FADE_OBJECT,
 		GOTO_ROOM,
 		SET_VAR,
+		INC_VAR,
 		SET_TET,
 		TET_SPEAK,
 		CUSTOM_SCRIPT,

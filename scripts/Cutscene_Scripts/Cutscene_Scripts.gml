@@ -119,6 +119,14 @@ function action_set_var(object,variable,val){
 	}
 }
 
+function action_increment_var(object,variable){
+		return {
+		type: ACTION.INC_VAR,
+		object: object,
+		variable: variable,
+	}
+}
+
 function action_set_tet(eyelids,light = obj_tet.light_col ,state = obj_tet.state){
 	return {
 		type: ACTION.SET_TET,

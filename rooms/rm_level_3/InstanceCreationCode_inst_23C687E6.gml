@@ -4,6 +4,7 @@ function cutscene(){
 			action_set_var(obj_player,"state",STATES.CUTSCENE),
 			action_wait_time(0.5),
 			
+			action_increment_var(obj_global_flags,"level_3_right_count"),
 			action_set_tet(EYELIDS.SKEPTICAL, c_green,STATES.IDLE),
 			action_create_tet_bubble(["Did you miss the sign?", "I want you to go left...", "There isn't anything here"]),
 			action_wait_for_object_destroy(obj_text_bubble),

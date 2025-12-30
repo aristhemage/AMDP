@@ -129,7 +129,14 @@ if (cutscene_active) {
 		        current_action += 1; 
 		        
 		        break;
-				
+			
+			//Increment variable value
+		    case ACTION.INC_VAR:
+			
+		        variable_instance_set(action.object, action.variable, variable_instance_get(action.object,action.variable) + 1);
+		        current_action += 1; 
+		        
+		        break;			
 				
 			//Go to another room, SHOULD BE LAST IN CUTSCENE, 
 			//SET UP NEW CUTSCENE IN OTHER ROOM

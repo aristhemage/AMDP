@@ -81,3 +81,8 @@ if(grav_block != noone){
 }
 
 //show_debug_message("g: " + string(grav) + "v: " + string(v_spd))
+
+// Sometimes doesnt want to die
+if (image_alpha == 0){
+	instance_destroy();	
+}

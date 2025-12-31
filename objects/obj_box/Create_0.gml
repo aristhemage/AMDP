@@ -11,6 +11,6 @@ int_y = y;
 
 in = false;
 fade = false;
-image_alpha = 0;
+image_alpha = 0.01;
 image_speed = 0;
 

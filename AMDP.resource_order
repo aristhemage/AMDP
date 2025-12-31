@@ -91,6 +91,7 @@
     {"name":"obj_gravity_wall","order":17,"path":"objects/obj_gravity_wall/obj_gravity_wall.yy",},
     {"name":"obj_jetpack_throw","order":2,"path":"objects/obj_jetpack_throw/obj_jetpack_throw.yy",},
     {"name":"obj_jump_block","order":12,"path":"objects/obj_jump_block/obj_jump_block.yy",},
+    {"name":"obj_lamp_broken_cutscene","order":11,"path":"objects/obj_lamp_broken_cutscene/obj_lamp_broken_cutscene.yy",},
     {"name":"obj_lamp_broken","order":2,"path":"objects/obj_lamp_broken/obj_lamp_broken.yy",},
     {"name":"obj_laser","order":9,"path":"objects/obj_laser/obj_laser.yy",},
     {"name":"obj_level_button","order":4,"path":"objects/obj_level_button/obj_level_button.yy",},

@@ -122,6 +122,7 @@
     {"id":{"name":"obj_gravity_wall","path":"objects/obj_gravity_wall/obj_gravity_wall.yy",},},
     {"id":{"name":"obj_jetpack_throw","path":"objects/obj_jetpack_throw/obj_jetpack_throw.yy",},},
     {"id":{"name":"obj_jump_block","path":"objects/obj_jump_block/obj_jump_block.yy",},},
+    {"id":{"name":"obj_lamp_broken_cutscene","path":"objects/obj_lamp_broken_cutscene/obj_lamp_broken_cutscene.yy",},},
     {"id":{"name":"obj_lamp_broken","path":"objects/obj_lamp_broken/obj_lamp_broken.yy",},},
     {"id":{"name":"obj_lamp","path":"objects/obj_lamp/obj_lamp.yy",},},
     {"id":{"name":"obj_laser","path":"objects/obj_laser/obj_laser.yy",},},

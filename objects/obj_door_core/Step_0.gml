@@ -23,3 +23,6 @@ if(distance_to_object(obj_player) < 96 && unlocked){
 		image_speed = 0;
 	}
 }
+
+// Used in tet room cutscene
+distance = distance_to_object(obj_player);

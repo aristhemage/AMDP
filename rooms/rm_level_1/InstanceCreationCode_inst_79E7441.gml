@@ -1,6 +1,7 @@
 function cutscene(){
 	with(obj_cutscene_master){
 		var actions = [
+			action_set_var(obj_global_flags,"can_play_music",false),
 			action_set_var(obj_player,"state",STATES.CUTSCENE),
 			action_set_var(obj_player,"can_jump",false),
 			action_set_var(obj_player,"can_jetpack",false),
@@ -27,6 +28,7 @@ function cutscene(){
 			
 			action_set_tet(EYELIDS.HAPPY,c_green,STATES.FOLLOW_PLAYER),
 			action_set_var(obj_player,"state",STATES.IDLE),
+			action_set_var(obj_global_flags,"can_play_music",true),
 
 			
 			

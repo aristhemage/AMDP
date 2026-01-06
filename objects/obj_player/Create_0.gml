@@ -37,6 +37,7 @@ jetpack_fuel = 80;
 jetpack_power = 0;
 jetpack_power_max = -4;
 jetpack_fuel_max = jetpack_fuel;
+RSTimer = 10;
 
 pressure_plates = array_create(PRESSURE_PLATES.ARRAY_LEN,0) //For Pressure Plates
 

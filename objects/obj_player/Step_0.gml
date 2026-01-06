@@ -93,12 +93,14 @@ if (!on_ground) {
 	}
 }else{
 	if(squish){
+
 		y_scale_vis = 0.75;
 		squish = false;
 		repeat(8){
 			instance_create_depth(x-48,y-3,1,obj_foot_particles,{v_vel : irandom_range(-4,4), col: c_gray})		
 			instance_create_depth(x+48,y-3,1,obj_foot_particles,{v_vel : irandom_range(-4,4), col: c_gray})		
 		}
+		
 	}
 }
 
@@ -111,9 +113,11 @@ if (jump_buffer_timer > 0 && (on_ground || coyote_timer > 0)) {
     coyote_timer = 0;      
 	x_scale_vis = 0.75;
 	squish = true;
+	audio_play_sound(choose(snd_jump1,snd_jump2,snd_jump3,snd_jump4),100,false,2);	
 	repeat(4){
 		instance_create_depth(x,y-3,1,obj_foot_particles,{v_vel : -v_spd + irandom_range(-4,4), col: c_gray})		
 	}
+	
 }
 
 // Jetpack stuff
@@ -128,6 +132,23 @@ if(key_jetpack && jetpack_fuel > 0){
 	
 	if(jetpack_power > jetpack_power_max){jetpack_power -= 0.1;}
 	jetpack_fuel--;
+	
+	// Play Audio
+	if(!audio_is_playing(snd_jetpack))
+		audio_play_sound(snd_jetpack,1,true);
+		
+	//Red stuff
+	if(RSTimer <= 0 && image_alpha == 1){
+		RSTimer = 10;
+		instance_create_depth(x-16,y+sprite_height/2.5-42,1,obj_red_stuff, {image_angle: image_angle});
+		instance_create_depth(x+16,y+sprite_height/2.5-42,1,obj_red_stuff, {image_angle: image_angle});
+	}else{
+		RSTimer--;	
+	}
+}else{
+	if(audio_is_playing(snd_jetpack)){
+		audio_stop_sound(snd_jetpack);	
+	}
 }
 
 
@@ -291,6 +312,11 @@ if(wall != noone){
 	}else{
 		x--;	
 	}
+}
+
+// Sounds
+if(jump_buffer_timer > 0 && (on_ground || coyote_timer > 0)){
+	
 }
 //Debug
 if keyboard_check(ord("R")){room_restart()}

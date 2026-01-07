@@ -52,5 +52,7 @@ dashing_unlocked = (room == rm_level_core_4)? true: false;
 debug_invince = false;
 depth = -100
 
+cutscene_id = -1;
+
 
 

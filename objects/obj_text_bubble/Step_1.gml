@@ -109,3 +109,12 @@ if(variable_instance_exists(self,"bubble_timer")){
 		}
 	}
 }
+
+if (showTxt != txt[txtNo]){
+	if(sound_timer <= 0){
+		sound_timer = 3;
+		audio_play_sound(snd_tet_speak,3,false)
+	}else{
+		sound_timer--;	
+	}
+}

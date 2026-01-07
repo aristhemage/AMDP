@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sng_base",
+  "%Name":"snd_tet_speak",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,17 +10,17 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":113.84163,
+  "duration":0.04972789,
   "exportDir":"",
-  "name":"sng_base",
+  "name":"snd_tet_speak",
   "parent":{
-    "name":"Music",
-    "path":"folders/Sounds/Music.yy",
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sng_base.mp3",
-  "volume":0.05,
+  "soundFile":"snd_tet_speak.ogg",
+  "volume":1.0,
 }

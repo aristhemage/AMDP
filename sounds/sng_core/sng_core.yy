@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"sng_base",
+  "%Name":"sng_core",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":113.84163,
+  "duration":153.62613,
   "exportDir":"",
-  "name":"sng_base",
+  "name":"sng_core",
   "parent":{
     "name":"Music",
     "path":"folders/Sounds/Music.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sng_base.mp3",
+  "soundFile":"sng_core.mp3",
   "volume":0.05,
 }

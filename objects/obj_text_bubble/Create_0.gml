@@ -22,6 +22,7 @@ new_y_scale = 2;
 draw = false;
 alarm[0] = 1;
 
+sound_timer = 3
 
 
 

@@ -1,5 +1,5 @@
 if(room == rm_init){
-	room_goto(rm_level_tet_room)	
+	room_goto(rm_level_3)	
 }
 
 if (can_play_music) {

@@ -323,4 +323,4 @@ if keyboard_check(ord("R")){room_restart()}
 if keyboard_check(ord("L")){room_goto(rm_level_select)}
 if keyboard_check_released(ord("N")){room_goto_next()}
 
-show_debug_message(obj_global_flags.explore_left_count)
+//show_debug_message(obj_global_flags.explore_left_count)

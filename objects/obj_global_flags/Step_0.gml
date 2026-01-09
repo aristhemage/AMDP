@@ -12,7 +12,7 @@ if (can_play_music) {
         case rm_level_4:
         case rm_level_5:
             if (!audio_is_playing(sng_base)) {
-                audio_play_sound(sng_base, 1, true, 1.1, 0);
+                audio_play_sound(sng_base, 1, true, obj_settings_master.sfx_volume, 0);
             }
         break;
 

@@ -1,5 +1,5 @@
-music_volume = 100;
-sfx_volume = 100;
+music_volume = 0.5;
+sfx_volume = 1.1;
 y_offset = 0;
 
 paused = false;

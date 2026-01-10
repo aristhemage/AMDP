@@ -10,11 +10,14 @@ if(selected){
 	}
 	x = clamp(mouse_x, 660, 940)
 	
+	
 	// Update the sound
 	var percent = (x - 660) / (940 - 660)
 	percent = clamp(percent, 0, 1)
-
-	obj_settings_master.music_volume = percent * 1.1;
-
+	
+	if(type == "Music")
+		obj_settings_master.music_volume = percent * 1.1;
+	else
+		obj_settings_master.sfx_volume = percent * 1.1;
 }
 

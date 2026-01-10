@@ -49,7 +49,7 @@ dash_dir = 0;
 dashing = false
 dashing_unlocked = (room == rm_level_core_4)? true: false;
 
-debug_invince = true;
+debug_invince = false;
 depth = -100
 
 cutscene_id = -1;

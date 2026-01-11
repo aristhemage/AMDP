@@ -22,3 +22,4 @@ if(life <= 0){
 }
 
 image_angle += 7 * sign(dir)
+

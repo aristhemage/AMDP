@@ -1,7 +1,7 @@
 function cutscene(){
 	with(obj_cutscene_master){
 		var actions = [
-			action_increment_var(obj_global_flags,"level_3_right_count"),
+			action_increment_var(obj_master,"level_3_right_count"),
 			action_set_var(obj_player,"state",STATES.CUTSCENE),
 			action_wait_time(0.5),
 			action_set_var(obj_sign_level3,"grow_again",true),

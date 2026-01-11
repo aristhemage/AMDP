@@ -113,7 +113,7 @@ if (jump_buffer_timer > 0 && (on_ground || coyote_timer > 0)) {
     coyote_timer = 0;      
 	x_scale_vis = 0.75;
 	squish = true;
-	audio_play_sound(choose(snd_jump1,snd_jump2,snd_jump3,snd_jump4),100,false,obj_settings_master.sfx_volume*10);	
+	audio_play_sound(choose(snd_jump1,snd_jump2,snd_jump3,snd_jump4),100,false,obj_settings_master.sfx_volume*5);	
 	repeat(4){
 		instance_create_depth(x,y-3,1,obj_foot_particles,{v_vel : -v_spd + irandom_range(-4,4), col: c_gray})		
 	}
@@ -135,7 +135,7 @@ if(key_jetpack && jetpack_fuel > 0){
 	
 	// Play Audio
 	if(!audio_is_playing(snd_jetpack))
-		audio_play_sound(snd_jetpack,1,true,obj_settings_master.sfx_volume*10);
+		audio_play_sound(snd_jetpack,1,true,obj_settings_master.sfx_volume*5);
 		
 	//Red stuff
 	if(RSTimer <= 0 && image_alpha == 1){
@@ -283,7 +283,7 @@ if(dead){
 		with(obj_core_4_laser){
 			instance_destroy();	
 		}
-		obj_global_flags.death_count++;
+		obj_master.death_count++;
 		dead = false;
 }
 
@@ -323,4 +323,3 @@ if keyboard_check(ord("R")){room_restart()}
 if keyboard_check(ord("L")){room_goto(rm_level_select)}
 if keyboard_check_released(ord("N")){room_goto_next()}
 
-//show_debug_message(obj_global_flags.explore_left_count)

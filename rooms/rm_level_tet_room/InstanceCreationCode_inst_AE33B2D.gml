@@ -3,7 +3,7 @@ function cutscene(){
 		var actions = [
 			action_set_var(obj_player,"state",STATES.CUTSCENE),
 			
-			action_set_tet(EYELIDS.HAPPY, c_green,STATES.IDLE),
+			action_set_tet(EYELIDS.HAPPY, c_green,STATES.FOLLOW_PLAYER),
 			action_create_tet_bubble(["Ah wait right there!","That's the door to the core of the game."]),
 			action_wait_for_object_destroy(obj_text_bubble),
 			
@@ -11,7 +11,7 @@ function cutscene(){
 			action_create_tet_bubble(["Or so I've been told... The door has been locked for as long as I can rememeber.","I've tried hacking into it, but alas no luck."]),
 			action_wait_for_object_destroy(obj_text_bubble),
 			
-			action_set_tet(EYELIDS.HAPPY, c_green,STATES.IDLE),
+			action_set_tet(EYELIDS.HAPPY, c_green,STATES.FOLLOW_PLAYER),
 			action_create_tet_bubble(["You are welcome to take a crack at it, wouldn't do any harm...","...I think"],1,false),
 			action_wait_for_object_destroy(obj_text_bubble),
 			

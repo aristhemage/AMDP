@@ -2,7 +2,7 @@ function cutscene(){
 	with(obj_cutscene_master){
 		var actions = [
 			action_set_var(obj_player,"state",STATES.CUTSCENE),
-			action_increment_var(obj_global_flags,"explore_left_count"),
+			action_increment_var(obj_master,"explore_left_count"),
 		   
 			action_set_tet(EYELIDS.SKEPTICAL,c_blue,STATES.IDLE),
 			action_wait_time(0.5),

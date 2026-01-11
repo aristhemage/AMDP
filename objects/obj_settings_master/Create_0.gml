@@ -1,5 +1,4 @@
-music_volume = 0.5;
-sfx_volume = 1.1;
+//Sfx and music vars are in obj_master
 y_offset = 0;
 
 paused = false;

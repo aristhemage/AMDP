@@ -36,7 +36,7 @@ if(room == rm_level_tet_room){
 	tet_room_loop_timer--;
 	if(tet_room_loop_timer <= 0){
 		audio_stop_sound(sng_base)	
-		audio_play_sound(sng_base, 1, true, obj_settings_master.music_volume, 0);
+		audio_play_sound(sng_base, 1, true, obj_settings_master.music_volume*random_range(0,1), 0);
 		tet_room_loop_timer = 600;
 	}
 }

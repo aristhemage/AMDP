@@ -1,10 +1,11 @@
-if keyboard_check_pressed(vk_escape){
+if keyboard_check_pressed(vk_escape) || (room = rm_menu && options_called){
 	paused = !paused;
 	if (paused){
 		// deactivate everything except this controller
 		instance_deactivate_all(false);
 		instance_activate_object(object_index);
 		instance_activate_object(obj_master);
+		instance_activate_object(obj_fade);
 		
 		// Spawn the sliders
 		if(!instance_exists(obj_sound_slider)){
@@ -23,6 +24,10 @@ if keyboard_check_pressed(vk_escape){
 			raw = obj_settings_master.sfx_volume / 1.1;
 			slider_x = 660 + raw * 280 + _cam_x;
 			instance_create_depth(slider_x , _cam_middle_y + 150 ,-1000, obj_sound_slider,{type : "SFX"});
+			
+			
+			var home_x = 200+ _cam_x;
+			instance_create_depth(home_x, _cam_middle_y + 300,-1000,obj_main_menu_button)
 
 		}
 	}
@@ -31,7 +36,11 @@ if keyboard_check_pressed(vk_escape){
 		with(obj_sound_slider){
 			instance_destroy();	
 		}
+		instance_destroy(obj_main_menu_button);
 	}
 }
 
-
+// Reset if options were called via main menu
+if(options_called){
+	options_called = false;	
+}

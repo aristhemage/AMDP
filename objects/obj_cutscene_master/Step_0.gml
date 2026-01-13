@@ -156,6 +156,11 @@ if (cutscene_active) {
 					obj_tet.light_col = action.light;
 					current_action++;
 				break;
+				
+			//Close the game
+			case ACTION.END_GAME:
+					game_end();
+				break;
 			
 			
 			//Broken do not use.

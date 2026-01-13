@@ -145,6 +145,12 @@ function action_set_tet(eyelids,light = obj_tet.light_col ,state = obj_tet.state
 	}
 }
 
+function action_end_game(){
+	return {
+		type: ACTION.END_GAME,
+	}
+}
+
 function action_custom_script(funct) {
     return {
         type: ACTION.CUSTOM_SCRIPT,

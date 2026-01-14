@@ -1,5 +1,5 @@
 if(!statsSetup && obj_OTOD_Game.difficulty != -1){
-	switch(oGame.difficulty){
+	switch(obj_OTOD_Game.difficulty){
 		case diff.easy:
 			hp = 100; //Hp of the player.
 			cash = 500; //Starting cash

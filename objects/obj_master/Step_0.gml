@@ -1,5 +1,5 @@
 if(room == rm_init){
-	room_goto(rm_menu)	
+	room_goto(rm_level_core_4)	
 }
 
 if (can_play_music) {
@@ -26,11 +26,14 @@ if (can_play_music) {
             if (!audio_is_playing(sng_core)) {
                 audio_stop_all();
                 audio_play_sound(sng_core, 1, true, obj_settings_master.music_volume, 0);
-            }
+            }else{
+				audio_sound_gain(sng_core,obj_settings_master.music_volume);
+			}
         break;
     }
 }
 
+show_debug_message(obj_settings_master.music_volume)
 // Tet room loop
 if(room == rm_level_tet_room){
 	tet_room_loop_timer--;

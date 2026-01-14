@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"shoot_cannon",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"shoot_cannon",
+  "parent":{
+    "name":"OTOD",
+    "path":"folders/Scripts/OTOD.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

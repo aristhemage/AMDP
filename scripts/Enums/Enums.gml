@@ -104,4 +104,41 @@ function Enums(){
 		MAX_HEALTH,
 		HP_BOX_SPAWNRATE,
 	}
+	
+	// For OTOD
+	enum phazes {
+		build,
+		attack
+	}
+	
+	// For OTOD NOT main game
+	enum States {
+		movingToCannon,
+		stunned,
+		confused,
+		blownBack,
+		attackingEnemies,
+		underground,
+		looking,
+		lookToUnderAni,
+		batConfused,
+	}
+	
+	enum Buttons{
+		Numbers,
+		RoundText,
+	}
+	enum Sliders{
+		Music,
+		SFX,
+		R,
+		G,
+		B,
+	}
+	enum diff{
+		easy,
+		med,
+		hard
+	}
+	
 }

@@ -21,5 +21,5 @@ alarm[0] = 60;
 alarm[1] = 30;
 alarm[2] = 90;
 
-start_battle = false;	
+	start_battle = false;	
 }

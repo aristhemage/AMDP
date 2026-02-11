@@ -322,4 +322,5 @@ if(jump_buffer_timer > 0 && (on_ground || coyote_timer > 0)){
 if keyboard_check(ord("R")){room_restart()}
 if keyboard_check(ord("L")){room_goto(rm_level_select)}
 if keyboard_check_released(ord("N")){room_goto_next()}
+if keyboard_check(ord("I")){debug_invince = !debug_invince}
 

@@ -1,4 +1,4 @@
-switch (state) {
+	switch (state) {
     case CAMERA_STATE.FOLLOW_PLAYER:
         if (instance_exists(obj_player)) {
             x = obj_player.x;

@@ -1,3 +1,9 @@
+// If no sound is detected default to tet
+
+if(!variable_instance_exists(id,"sound")){
+	sound = snd_tet_speak;	
+}
+
 //Follow the object
 x = follow.x + follow.sprite_width/2;
 y = follow.y - sprite_height;
@@ -113,7 +119,7 @@ if(variable_instance_exists(self,"bubble_timer")){
 if (showTxt != txt[txtNo]){
 	if(sound_timer <= 0){
 		sound_timer = 3;
-		audio_play_sound(snd_tet_speak,3,false,obj_settings_master.sfx_volume)
+		audio_play_sound(sound,3,false,obj_settings_master.sfx_volume)
 	}else{
 		sound_timer--;	
 	}

@@ -168,6 +168,18 @@ function action_create_tet_bubble(txt,txtSpd = 1, isNext = true, bubbleTimer = -
 	};
 }
 
+function action_create_other_bubble(obj = obj_tet,sound = snd_tet_speak, txt,txtSpd = 1, isNext = true, bubbleTimer = -1){
+	return{
+		type: ACTION.OTHER_SPEAK,
+		obj: obj,
+		txt: txt,
+		sound: sound,
+		txtSpd: txtSpd,
+		isNext: isNext,
+		bubbleTimer: bubbleTimer
+	};
+}
+
 function start_cutscene(actions) {
 	if(!cutscene_active){
 	    cutscene_active = true;

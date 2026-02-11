@@ -1,5 +1,9 @@
 draw_sprite(spr_core_boss_base,0,x,y);
-draw_sprite(spr_core_boss_eye,0,x + eye_x_offset,y + eye_y_offset);
+
+draw_set_alpha(eye_alpha)
+	draw_sprite(spr_core_boss_eye,0,x + eye_x_offset,y + eye_y_offset);
+draw_set_alpha(1)
+
 draw_sprite(spr_core_boss_shading,0,x,y);
 
 var eye_rad = 32

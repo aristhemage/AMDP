@@ -50,7 +50,19 @@ if (cutscene_active) {
 			for(var i = 0; i < array_length(action.txt); i++){
 				newTxt[i] = multiline_string(action.txt[i]);	
 			}
-				instance_create_depth(obj_tet.x + obj_tet.sprite_width/2,obj_tet.y-obj_tet.sprite_height,1,obj_text_bubble,{follow: obj_tet,txtSpd: action.txtSpd , isNext: action.isNext, txt: newTxt, bubble_timer: action.bubbleTimer})
+				instance_create_depth(obj_tet.x + obj_tet.sprite_width/2,obj_tet.y-obj_tet.sprite_height,1,obj_text_bubble,{follow: obj_tet,txtSpd: action.txtSpd , isNext: action.isNext, txt: newTxt, bubble_timer: action.bubbleTimer, sound: snd_tet_speak})
+				current_action += 1;
+			break;
+			
+			// Another object speaking
+			case ACTION.OTHER_SPEAK:
+			var newTxt = [];
+			var obj = action.obj;
+			var sound = action.sound;
+			for(var i = 0; i < array_length(action.txt); i++){
+				newTxt[i] = multiline_string(action.txt[i]);	
+			}
+				instance_create_depth(obj.x + obj.sprite_width/2,obj.y-obj.sprite_height,1,obj_text_bubble,{follow: obj,txtSpd: action.txtSpd , isNext: action.isNext, txt: newTxt, bubble_timer: action.bubbleTimer,sound: sound})
 				current_action += 1;
 			break;
 			//Wait for object to exist

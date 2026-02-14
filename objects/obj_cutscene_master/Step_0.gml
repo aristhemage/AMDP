@@ -13,7 +13,7 @@ if (cutscene_active) {
 
 			    // Make sure obj is valid
 			    if (!instance_exists(obj)) {
-			        show_debug_message("MOVE ERROR: Target object doesn't exist.");
+			        show_message("MOVE ERROR: Target object doesn't exist. If you see this please contact\nThe developer ArisTheMage over Discord.");
 			        current_action += 1;
 			        break;
 			    }

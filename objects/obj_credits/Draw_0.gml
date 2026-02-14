@@ -1,56 +1,23 @@
 draw_set_halign(fa_center);
 
-var cx = room_width * 0.25;
-var yy = scroll_y;
+var _x = room_width * 0.25;
+var _y = scroll_y;
+var _y_offset = 0;
 
-for (var i = 0; i < array_length(credits); i++)
-{
-    var entry = credits[i];
+for (var i = 0; i < array_length(credits); i++){
 
-    switch(entry.type)
-    {
-		case "text":
-		{
-		    draw_set_font(fnt_game);
-		    draw_set_valign(fa_top);
-
-		    var final_scale = entry.scale * 0.5;
-
-		    draw_text_transformed(
-		        cx,
-		        yy,
-		        entry.text,
-		        final_scale,
-		        final_scale,
-		        0
-		    );
-
-		    yy += (40 * final_scale) + 10;
-		}
+	switch(credits[i][0]){
+		case "Sprite":
+			draw_sprite(credits[i][1],_sprite_index,_x,_y+credits[i][2] + _y_offset)
+			_y_offset += credits[i][2]
 		break;
-
-
-        case "sprite":
-        {
-            var spr = entry.sprite;
-            var h = sprite_get_height(spr);
-
-            draw_sprite(
-                spr,
-                0,
-                cx,
-                yy + h * 0.5
-            );
-
-            yy += h + 20;
-        }
-        break;
-
-
-        case "space":
-        {
-            yy += entry.space;
-        }
-        break;
-    }
+		
+		case "Spacer":
+			_y_offset += credits[i][1]
+		break;
+		
+		case "Text":
+			draw_text_transformed(_x,_y +   _y_offset, credits[i][1],0.75,0.75,0 );
+		break;
+	}
 }

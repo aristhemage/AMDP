@@ -1,8 +1,8 @@
-function multiline_string(str) {
+function multiline_string(str,char_count = 20) {
   var newStr = "";         // The final multiline string
   var charCount = 0;       // Current number of characters in the current line
   //var capitalizeNext = true; // Whether the next character should be capitalized
-  var maxChar = 20; //How many characters per line.
+  var maxChar = char_count; //How many characters per line (Default 20).
   
   // Loop through each character in the input string
   for (var i = 1; i <= string_length(str); i++) {

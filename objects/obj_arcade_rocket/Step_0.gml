@@ -161,4 +161,4 @@ if(good != noone){
 //Debug
 if keyboard_check(ord("R")){room_restart()}
 
-show_debug_message(levels)
+// show_debug_message(levels)

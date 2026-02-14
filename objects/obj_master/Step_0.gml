@@ -33,7 +33,7 @@ if (can_play_music) {
     }
 }
 
-show_debug_message(obj_settings_master.music_volume)
+// show_debug_message(obj_settings_master.music_volume)
 // Tet room loop
 if(room == rm_level_tet_room){
 	tet_room_loop_timer--;

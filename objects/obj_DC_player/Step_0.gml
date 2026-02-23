@@ -21,8 +21,26 @@ if(!global.paused){
 	if (kUp)    v_spd = -1;
 	if (kDown)  v_spd =  1;
 
-	x += h_spd * move_spd;
-	y += v_spd * move_spd;
+	var move_x = h_spd * move_spd;
+	var move_y = v_spd * move_spd;
+
+	// Horizontal collision
+	if (!place_meeting(x + move_x, y, p_wall)) {
+	    x += move_x;
+	} else {
+	    while (!place_meeting(x + sign(move_x), y, p_wall)) {
+	        x += sign(move_x);
+	    }
+	}
+
+	// Vertical collision
+	if (!place_meeting(x, y + move_y, p_wall)) {
+	    y += move_y;
+	} else {
+	    while (!place_meeting(x, y + sign(move_y), p_wall)) {
+	        y += sign(move_y);
+	    }
+	}
 
 	// Shooting
 	

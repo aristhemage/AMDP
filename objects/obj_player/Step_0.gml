@@ -314,6 +314,7 @@ if(wall != noone){
 	}
 }
 
+
 // Sounds
 if(jump_buffer_timer > 0 && (on_ground || coyote_timer > 0)){
 	

@@ -8,8 +8,8 @@
   "name":"obj_player_rpg",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"RPG",
+    "path":"folders/Objects/RPG.yy",
   },
   "parentObjectId":null,
   "persistent":false,

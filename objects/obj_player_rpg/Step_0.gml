@@ -19,3 +19,5 @@ if(!place_meeting(x + h_speed  + 1 * sign(h_speed), y, p_wall)){
 if(!place_meeting(x, y + v_speed  + 1 * sign(v_speed), p_wall)){
 	y += v_speed;	
 }
+
+depth = -y;

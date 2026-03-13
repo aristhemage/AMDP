@@ -1,12 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_player_rpg",
+  "%Name":"obj_tet_rpg_portrait",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_player_rpg",
+  "name":"obj_tet_rpg_portrait",
   "overriddenProperties":[],
   "parent":{
     "name":"RPG",
@@ -31,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player",
-    "path":"sprites/spr_player/spr_player.yy",
+    "name":"spr_tet_rpg_portraits",
+    "path":"sprites/spr_tet_rpg_portraits/spr_tet_rpg_portraits.yy",
   },
   "spriteMaskId":null,
   "visible":true,

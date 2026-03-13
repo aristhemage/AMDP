@@ -1,5 +1,5 @@
-function tet_goto(ex, ey, spd) {
-    with (obj_tet) {
+function tet_goto(ex, ey, spd, obj = obj_tet) {
+    with (obj) {
         var dx = ex - x;
         var dy = ey - y;
         var dist = point_distance(x, y, ex, ey);

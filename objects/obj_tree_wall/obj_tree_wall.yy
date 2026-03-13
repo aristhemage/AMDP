@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_player_rpg",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_tree_wall",
+  "eventList":[],
   "managed":true,
-  "name":"obj_player_rpg",
+  "name":"obj_tree_wall",
   "overriddenProperties":[],
   "parent":{
     "name":"RPG",
     "path":"folders/Objects/RPG.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"p_wall",
+    "path":"objects/p_wall/p_wall.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player",
-    "path":"sprites/spr_player/spr_player.yy",
+    "name":"spr_tree_wall",
+    "path":"sprites/spr_tree_wall/spr_tree_wall.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,6 +1,3 @@
-//Looks
-light_col = c_green;
-eyelid_no =	EYELIDS.HAPPY;
 PSTimer = 10;
 
 state = STATES.FOLLOW_PLAYER;

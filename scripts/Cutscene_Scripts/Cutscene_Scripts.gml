@@ -180,6 +180,19 @@ function action_create_other_bubble(obj = obj_tet,sound = snd_tet_speak, txt,txt
 	};
 }
 
+function action_create_rpg_text(txt = ["Text not provided"], txtSpd = 1, model = -1, face = EYELIDS.HAPPY, col = c_green, last = false){
+	return{
+		type: ACTION.RPG_SPEAK,
+		txt: txt,
+		txtSpd: txtSpd,
+		model: model,
+		face: face,
+		col: col,
+		last: last
+		
+	}
+}
+
 function start_cutscene(actions) {
 	if(!cutscene_active){
 	    cutscene_active = true;

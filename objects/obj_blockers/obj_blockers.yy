@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tree_wall",
-  "eventList":[],
+  "%Name":"obj_blockers",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_tree_wall",
+  "name":"obj_blockers",
   "overriddenProperties":[],
   "parent":{
     "name":"Misc",
     "path":"folders/Objects/RPG/Misc.yy",
   },
-  "parentObjectId":{
-    "name":"p_wall",
-    "path":"objects/p_wall/p_wall.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_tree_wall",
-    "path":"sprites/spr_tree_wall/spr_tree_wall.yy",
+    "name":"spr_cutscene_trigger",
+    "path":"sprites/spr_cutscene_trigger/spr_cutscene_trigger.yy",
   },
   "spriteMaskId":null,
   "visible":true,

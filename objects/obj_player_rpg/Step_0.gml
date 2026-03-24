@@ -12,11 +12,11 @@ if((key_left || key_right) && (key_up || key_down)){
 h_spd = (key_right-key_left) * spd;
 v_spd = (key_down-key_up) * spd;
 
-if(!place_meeting(x + h_spd  + 1 * sign(h_spd), y, p_wall)){
+if(!place_meeting(x + h_spd  + 1 * sign(h_spd), y, p_wall) && state != STATES.CUTSCENE){
 	x += h_spd;	
 }
 
-if(!place_meeting(x, y + v_spd  + 1 * sign(v_spd), p_wall)){
+if(!place_meeting(x, y + v_spd  + 1 * sign(v_spd), p_wall)  && state != STATES.CUTSCENE){
 	y += v_spd;	
 }
 

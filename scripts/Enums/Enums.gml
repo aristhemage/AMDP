@@ -22,6 +22,7 @@ function Enums(){
 		SET_TET,
 		TET_SPEAK,
 		OTHER_SPEAK,
+		RPG_SPEAK,
 		END_GAME,
 		CUSTOM_SCRIPT,
 	}

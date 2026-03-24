@@ -168,7 +168,25 @@ if (cutscene_active) {
 					obj_tet.light_col = action.light;
 					current_action++;
 				break;
-				
+			
+			// RPG Textbox
+			case ACTION.RPG_SPEAK:
+				if(!instance_exists(obj_rpg_textbox)){
+					instance_create_depth(0,0,-999,obj_rpg_textbox,{txt: action.txt, txtSpd : action.txtSpd, model: action.model, face: action.face, col: action.col, last: action.last})
+				}else{
+					obj_rpg_textbox.txt = action.txt;	
+					obj_rpg_textbox.txtSpd = action.txtSpd;	
+					obj_rpg_textbox.model = action.model;	
+					obj_rpg_textbox.face = action.face;	
+					obj_rpg_textbox.col = action.col;	
+					obj_rpg_textbox.last = action.last;	
+					obj_rpg_textbox.showTxt = "";	
+					obj_rpg_textbox.txtNo = 0;	
+					obj_rpg_textbox.txtPos = 1;	
+					obj_rpg_textbox.finished = false;	
+				}
+				current_action++;
+			break;
 			//Close the game
 			case ACTION.END_GAME:
 					game_end();

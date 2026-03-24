@@ -7,6 +7,7 @@ showTxt = "";
 txtPos = 1;
 txtNo = 0;
 once = false;
+finished = false;
 
 txtTimerInt = 0;	
 txtTimer = 0;	
@@ -23,6 +24,7 @@ draw = false;
 alarm[0] = 1;
 
 sound_timer = 3
+
 
 
 

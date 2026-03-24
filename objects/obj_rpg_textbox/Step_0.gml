@@ -7,29 +7,9 @@ if(!variable_instance_exists(id,"sound")){
 
 
 
-if(global.bubble_x_scale == -1){
-	
-    lines = 1 + string_count ("\n", showTxt);
-	if(abs(new_x_scale-image_xscale) > 0.05){
-		if(new_x_scale < image_xscale){
-			image_xscale -= 0.05;	
-		}else{
-			image_xscale+= 0.05;	
-		}
-	}
 
-	if(abs(new_y_scale-image_yscale) > 0.05){
-		if(new_y_scale < image_yscale){
-			image_yscale-= 0.05;	
-		}else{
-			image_yscale+= 0.05;	
-		}
-	}
-}else{
-	image_xscale = global.bubble_x_scale;
-	image_yscale = global.bubble_y_scale;
-	global.bubble_x_scale = -1;
-}
+lines = 1 + string_count ("\n", showTxt);
+
 //Make the text show up one letter at a time
 if(!once){
 	txtTimerInt = txtSpd;	
@@ -77,12 +57,9 @@ if(keyboard_check_pressed(vk_enter)){
 			txtPos = 1;
 			showTxt = "";
 		}else{
-			//If there isnt another textbubble coming up, destroy, otherwise set globals then destroy
-			if(!isNext){
-				instance_destroy();	
+			if(!last){
+				finished = true;	
 			}else{
-				global.bubble_x_scale = image_xscale;
-				global.bubble_y_scale = image_yscale;
 				instance_destroy();
 			}
 		}
@@ -108,7 +85,11 @@ if(variable_instance_exists(self,"bubble_timer")){
 		if(bubble_timer > 0){
 			bubble_timer--;	
 		}else{
-			instance_destroy();	
+			if(!last){
+				finished = true;	
+			}else{
+				instance_destroy();
+			}
 		}
 	}
 }
@@ -120,4 +101,15 @@ if (showTxt != txt[txtNo]){
 	}else{
 		sound_timer--;	
 	}
+}
+
+// Spawn in the correct portrait
+if (model != -1 && !instance_exists(obj_tet_rpg_portrait)){
+	instance_create_depth(x,y,-800,obj_tet_rpg_portrait,{eyelid_no: face, light_col: col})	
+}
+
+// Update it live
+if(instance_exists(obj_tet_rpg_portrait)){
+	obj_tet_rpg_portrait.eyelid_no = face;
+	obj_tet_rpg_portrait.light_col = col;
 }

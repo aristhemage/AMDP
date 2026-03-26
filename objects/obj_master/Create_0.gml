@@ -18,3 +18,13 @@ obj_settings_master.music_volume = ini_read_real("AUDIO", "MUSIC", 1.1);
 obj_settings_master.sfx_volume   = ini_read_real("AUDIO", "SFX",   1.1);
 
 ini_close();
+
+
+// RPG stuff
+rpg_x = 0;
+rpg_y = 0;
+rpg_room = -1;
+reposition_rpg_player = false;
+enemy_id = -1;
+
+kill_flag = []

@@ -23,6 +23,7 @@ function Enums(){
 		TET_SPEAK,
 		OTHER_SPEAK,
 		RPG_SPEAK,
+		RPG_BATTLE,
 		END_GAME,
 		CUSTOM_SCRIPT,
 	}
@@ -141,6 +142,11 @@ function Enums(){
 		easy,
 		med,
 		hard
+	}
+	
+	// RPG
+	enum KILL_FLAG{
+		SPIKE
 	}
 	
 }

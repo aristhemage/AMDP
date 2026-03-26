@@ -1,20 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_rpg_spike_enemy",
+  "%Name":"obj_rpg_spike_overworld",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_rpg_spike_enemy",
+  "name":"obj_rpg_spike_overworld",
   "overriddenProperties":[],
   "parent":{
     "name":"Enemies",
     "path":"folders/Objects/RPG/Enemies.yy",
   },
-  "parentObjectId":{
-    "name":"obj_enemy",
-    "path":"objects/obj_enemy/obj_enemy.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -36,9 +33,6 @@
     "name":"spr_spike_rpg",
     "path":"sprites/spr_spike_rpg/spr_spike_rpg.yy",
   },
-  "spriteMaskId":{
-    "name":"spr_spike_rpg",
-    "path":"sprites/spr_spike_rpg/spr_spike_rpg.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

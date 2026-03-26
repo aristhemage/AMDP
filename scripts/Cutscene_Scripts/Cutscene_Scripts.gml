@@ -190,6 +190,17 @@ function action_create_rpg_text(txt = ["Text not provided"], txtSpd = 1, model =
 		col: col,
 		last: last
 		
+	}	
+}
+
+function action_start_battle(obj){
+	return{
+		type: ACTION.RPG_BATTLE,
+		rpg_x: obj_player_rpg.x,
+		rpg_y: obj_player_rpg.y,
+		rpg_room: room,
+		enemy_id: enemy_id,
+		obj:obj
 	}
 }
 
@@ -201,5 +212,6 @@ function start_cutscene(actions) {
 	    waiting = false;
 	}
 	
+
 
 }

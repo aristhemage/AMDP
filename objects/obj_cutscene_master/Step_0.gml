@@ -187,6 +187,20 @@ if (cutscene_active) {
 				}
 				current_action++;
 			break;
+			
+			// RPG Battle
+			case ACTION.RPG_BATTLE:
+				obj_master.rpg_x = action.rpg_x;
+				obj_master.rpg_y = action.rpg_y;
+				obj_master.rpg_room = action.rpg_room;
+				obj_master.enemy_id = action.enemy_id;
+				obj_master.enemy_obj = action.obj;
+				
+				//TODO: Add transition
+				room_goto(rm_rpg_battle)
+			
+			
+			break;
 			//Close the game
 			case ACTION.END_GAME:
 					game_end();

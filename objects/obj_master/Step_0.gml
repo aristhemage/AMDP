@@ -53,3 +53,14 @@ if(!can_play_music){
 	audio_stop_sound(sng_base);
 	audio_stop_sound(sng_core);
 }
+
+// Rpg stuff
+if(reposition_rpg_player && room == rpg_room){
+	obj_player_rpg.x = rpg_x;	
+	obj_player_rpg.y = rpg_y;	
+	reposition_rpg_player = false;
+}
+
+if(room == rm_rpg_battle && !instance_exists(enemy_obj)){
+	instance_create_depth(room_width/2,200,1,enemy_obj);
+}

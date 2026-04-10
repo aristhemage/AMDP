@@ -26,5 +26,6 @@ rpg_y = 0;
 rpg_room = -1;
 reposition_rpg_player = false;
 enemy_id = -1;
-
+button_selected = 0;
 kill_flag = []
+rpg_turn = TURN.PLAYER;

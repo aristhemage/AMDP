@@ -108,13 +108,12 @@ function Enums(){
 		HP_BOX_SPAWNRATE,
 	}
 	
-	// For OTOD
+	// For OTOD  NOT main game
 	enum phazes {
 		build,
 		attack
 	}
 	
-	// For OTOD NOT main game
 	enum States {
 		movingToCannon,
 		stunned,
@@ -145,8 +144,10 @@ function Enums(){
 	}
 	
 	// RPG
-	enum KILL_FLAG{
-		SPIKE
+	enum TURN{
+		PLAYER,
+		ENEMY
 	}
 	
+
 }

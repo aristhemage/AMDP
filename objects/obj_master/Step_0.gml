@@ -64,3 +64,13 @@ if(reposition_rpg_player && room == rpg_room){
 if(room == rm_rpg_battle && !instance_exists(enemy_obj)){
 	instance_create_depth(room_width/2,200,1,enemy_obj);
 }
+
+if(room == rm_rpg_battle && rpg_turn == TURN.PLAYER){
+	var key_left = keyboard_check_released(vk_left) || keyboard_check_released(ord("A"));
+	var key_right = keyboard_check_released(vk_right) || keyboard_check_released(ord("D"));
+	
+	if(key_right || key_left){
+		button_selected = button_selected == 0 ? 1:0	
+	}
+	show_debug_message(button_selected)
+}

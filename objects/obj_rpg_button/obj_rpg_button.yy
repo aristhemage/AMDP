@@ -1,15 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_rpg_spike_overworld",
+  "%Name":"obj_rpg_button",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_rpg_spike_overworld",
+  "name":"obj_rpg_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Objects/RPG/Battle/Enemies.yy",
+    "name":"Battle",
+    "path":"folders/Objects/RPG/Battle.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_spike_rpg",
-    "path":"sprites/spr_spike_rpg/spr_spike_rpg.yy",
+    "name":"spr_rpg_fight",
+    "path":"sprites/spr_rpg_fight/spr_rpg_fight.yy",
   },
   "spriteMaskId":null,
   "visible":true,

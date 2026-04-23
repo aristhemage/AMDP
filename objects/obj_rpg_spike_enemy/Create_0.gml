@@ -3,3 +3,7 @@ hp = 4;
 max_hp = hp;
 draw_hp = hp;
 draw_hp_timer = 0;
+attack_list = [obj_attack_test];
+attack_size = [[1,1]]
+image_xscale = 2;
+image_yscale = 2;

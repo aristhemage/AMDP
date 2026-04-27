@@ -69,7 +69,7 @@ if(showTxt != txt[txtNo]){
 }
 
 //Exit the bubble/Skip the text/Go To next
-if(keyboard_check_pressed(vk_enter)){
+if(keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("Z"))){
 	if(showTxt != txt[txtNo]){
 		showTxt = txt[txtNo];
 		image_xscale = new_x_scale;

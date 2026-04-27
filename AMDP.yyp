@@ -172,6 +172,7 @@
     {"id":{"name":"obj_red_stuff","path":"objects/obj_red_stuff/obj_red_stuff.yy",},},
     {"id":{"name":"obj_rpg_attack","path":"objects/obj_rpg_attack/obj_rpg_attack.yy",},},
     {"id":{"name":"obj_rpg_battlebox","path":"objects/obj_rpg_battlebox/obj_rpg_battlebox.yy",},},
+    {"id":{"name":"obj_rpg_bullet","path":"objects/obj_rpg_bullet/obj_rpg_bullet.yy",},},
     {"id":{"name":"obj_rpg_button","path":"objects/obj_rpg_button/obj_rpg_button.yy",},},
     {"id":{"name":"obj_rpg_soul","path":"objects/obj_rpg_soul/obj_rpg_soul.yy",},},
     {"id":{"name":"obj_rpg_spike_enemy","path":"objects/obj_rpg_spike_enemy/obj_rpg_spike_enemy.yy",},},

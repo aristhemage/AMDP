@@ -29,3 +29,6 @@ enemy_id = -1;
 button_selected = 0;
 kill_flag = []
 rpg_turn = TURN.PLAYER;
+rpg_hp = 10;
+seen_negative = false;
+pause_battle = false;

@@ -63,14 +63,15 @@ if(reposition_rpg_player && room == rpg_room){
 
 if(room == rm_rpg_battle && !instance_exists(enemy_obj)){
 	instance_create_depth(room_width/2,300,1,enemy_obj);
+	instance_create_depth(room_width/2,900,1,obj_rpg_battlebox)
 }
 
-if(room == rm_rpg_battle && rpg_turn == TURN.PLAYER){
+if(room == rm_rpg_battle && rpg_turn == TURN.PLAYER  && !pause_battle){
 	var key_left = keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord("A"));
 	var key_right = keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord("D"));
 	
 	if(key_right || key_left){
 		button_selected = button_selected == 0 ? 1:0	
 	}
-	show_debug_message(button_selected)
+	
 }

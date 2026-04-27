@@ -1,21 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bullet_spike",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_rpg_bullet",
+  "eventList":[],
   "managed":true,
-  "name":"obj_bullet_spike",
+  "name":"obj_rpg_bullet",
   "overriddenProperties":[],
   "parent":{
     "name":"Bullets",
     "path":"folders/Objects/RPG/Battle/Bullets.yy",
   },
-  "parentObjectId":{
-    "name":"obj_rpg_bullet",
-    "path":"objects/obj_rpg_bullet/obj_rpg_bullet.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_bullet_spike",
-    "path":"sprites/spr_bullet_spike/spr_bullet_spike.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

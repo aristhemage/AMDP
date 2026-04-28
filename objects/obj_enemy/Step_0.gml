@@ -21,6 +21,7 @@ if(obj_master.rpg_turn == TURN.ENEMY && !instance_exists(obj_rpg_attack)){
 	target_yscale = attack_size[attack_choice][1];
 	obj_rpg_battlebox.image_xscale = lerp(obj_rpg_battlebox.image_xscale, target_xscale, 0.1);
 	obj_rpg_battlebox.image_yscale = lerp(obj_rpg_battlebox.image_yscale, target_yscale, 0.1);
+	obj_master.rpg_turn_no++;
 	
 	// Roughly the correct size
 	if(abs(obj_rpg_battlebox.image_xscale - attack_size[attack_choice][0]) < 0.2 && abs(obj_rpg_battlebox.image_yscale - attack_size[attack_choice][1]) < 0.2){

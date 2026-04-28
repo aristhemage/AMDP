@@ -1,19 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_rpg_soul",
+  "%Name":"obj_bullet_spike_sing",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_rpg_soul",
+  "name":"obj_bullet_spike_sing",
   "overriddenProperties":[],
   "parent":{
-    "name":"Battle",
-    "path":"folders/Objects/RPG/Battle.yy",
+    "name":"Bullets",
+    "path":"folders/Objects/RPG/Battle/Bullets.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_rpg_bullet",
+    "path":"objects/obj_rpg_bullet/obj_rpg_bullet.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_player_rpg",
-    "path":"sprites/spr_player_rpg/spr_player_rpg.yy",
+    "name":"spr_bullet_spike_sing",
+    "path":"sprites/spr_bullet_spike_sing/spr_bullet_spike_sing.yy",
   },
   "spriteMaskId":null,
   "visible":true,

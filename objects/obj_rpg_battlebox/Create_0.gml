@@ -6,7 +6,9 @@ depth = 10
 
 text_padding = 40;
 
-flavour_text = obj_enemy.flavour_text
+flavour_text = obj_enemy.intro_text
 show_txt = ""
 txt_pos = 1;
 txt_timer = 3
+
+chose_text = false;

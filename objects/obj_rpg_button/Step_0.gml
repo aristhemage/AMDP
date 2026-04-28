@@ -11,4 +11,8 @@ if(!obj_master.pause_battle){
 		obj_enemy.hp--;
 		obj_master.rpg_turn = TURN.ENEMY;
 	}
+	if(keyboard_check_released(vk_enter) || keyboard_check_released(ord("Z")) && obj_master.rpg_turn == TURN.PLAYER && button == 1 && selected == 1){
+		obj_master.shield_health += 2;
+		obj_master.rpg_turn = TURN.ENEMY;
+	}
 }

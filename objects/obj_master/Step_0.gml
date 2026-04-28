@@ -62,8 +62,10 @@ if(reposition_rpg_player && room == rpg_room){
 }
 
 if(room == rm_rpg_battle && !instance_exists(enemy_obj)){
+	rpg_turn_no = 0;
+	shield_health = 0;
 	instance_create_depth(room_width/2,300,1,enemy_obj);
-	instance_create_depth(room_width/2,900,1,obj_rpg_battlebox)
+	instance_create_depth(room_width/2,900,1,obj_rpg_battlebox);
 }
 
 if(room == rm_rpg_battle && rpg_turn == TURN.PLAYER  && !pause_battle){

@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_attack_test",
+  "%Name":"obj_attack_spike_sing",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_attack_test",
+  "name":"obj_attack_spike_sing",
   "overriddenProperties":[],
   "parent":{
-    "name":"Attacks",
-    "path":"folders/Objects/RPG/Battle/Attacks.yy",
+    "name":"Spike",
+    "path":"folders/Objects/RPG/Battle/Attacks/Spike.yy",
   },
   "parentObjectId":{
     "name":"obj_rpg_attack",

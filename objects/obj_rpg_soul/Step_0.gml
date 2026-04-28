@@ -30,7 +30,11 @@ y = clamp(y,box.bbox_top + 15 , box.bbox_bottom - 15);
 // Touching bullets
 if(place_meeting(x,y,obj_rpg_bullet)){
 	if(hit_cooldown <= 0){
-		obj_master.rpg_hp--;	
+		if(obj_master.shield_health <= 0){
+			obj_master.rpg_hp--;	
+		}else{
+			obj_master.shield_health--;
+		}
 		hit_cooldown = 60;
 	}
 }

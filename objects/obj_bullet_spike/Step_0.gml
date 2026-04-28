@@ -4,3 +4,4 @@ if(image_alpha < 1){
 	y += v_spd;
 	v_spd += 0.2;
 }
+

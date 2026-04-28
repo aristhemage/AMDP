@@ -1,19 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_rpg_soul",
+  "%Name":"obj_attack_spike_drop",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_rpg_soul",
+  "name":"obj_attack_spike_drop",
   "overriddenProperties":[],
   "parent":{
-    "name":"Battle",
-    "path":"folders/Objects/RPG/Battle.yy",
+    "name":"Spike",
+    "path":"folders/Objects/RPG/Battle/Attacks/Spike.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_rpg_attack",
+    "path":"objects/obj_rpg_attack/obj_rpg_attack.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_player_rpg",
-    "path":"sprites/spr_player_rpg/spr_player_rpg.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

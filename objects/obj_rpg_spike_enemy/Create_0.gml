@@ -1,9 +1,10 @@
-flavour_text = "This is a dummy enemy!";
+intro_text = "SPYK comes poking in!"
+flavour_text = ["SPYK is prepping a song", "SPYK polishes their tip", multiline_string("SPYK want's to invite you to karyokee but is too mad to do so",30)];
 hp = 4;
 max_hp = hp;
 draw_hp = hp;
 draw_hp_timer = 0;
-attack_list = [obj_attack_test];
-attack_size = [[1,1]]
+attack_list = [obj_attack_spike_sing,obj_attack_spike_drop];
+attack_size = [[1,1],[1,1]]
 image_xscale = 2;
 image_yscale = 2;

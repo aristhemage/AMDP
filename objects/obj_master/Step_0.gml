@@ -61,11 +61,22 @@ if(reposition_rpg_player && room == rpg_room){
 	reposition_rpg_player = false;
 }
 
-if(room == rm_rpg_battle && !instance_exists(enemy_obj)){
+if(room == rm_rpg_battle && !instance_exists(enemy_obj) && !killed){
 	rpg_turn_no = 0;
 	shield_health = 0;
 	instance_create_depth(room_width/2,300,1,enemy_obj);
 	instance_create_depth(room_width/2,900,1,obj_rpg_battlebox);
+}
+
+if(killed){
+	death_timer--;
+	if(death_timer <= 0){
+		obj_master.reposition_rpg_player = true;
+		array_push(obj_master.kill_flag,obj_master.enemy_id)
+		room_goto(obj_master.rpg_room);	
+		killed = false
+		death_timer = 90;
+	}	
 }
 
 if(room == rm_rpg_battle && rpg_turn == TURN.PLAYER  && !pause_battle){

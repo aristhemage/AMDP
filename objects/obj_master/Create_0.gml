@@ -34,3 +34,5 @@ shield_health = 0;
 rpg_hp = 10;
 seen_negative = false;
 pause_battle = false;
+killed = false;
+death_timer = 90;

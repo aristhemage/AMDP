@@ -1,0 +1,1 @@
+draw_sprite_part(sprite_index,0,src_x,src_y,src_w,src_h,x,y);

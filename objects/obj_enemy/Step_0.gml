@@ -1,9 +1,11 @@
 if(hp <= 0){
-	obj_master.reposition_rpg_player = true;
+	obj_master.killed = true;
 	obj_master.rpg_turn = TURN.ENEMY
-	array_push(obj_master.kill_flag,obj_master.enemy_id)
-	room_goto(obj_master.rpg_room);	
+	scr_fizzle_destroy(obj_rpg_spike_enemy)
+	
+
 }
+show_debug_message(hp)
 
 if(hp < draw_hp){
 	draw_hp -= 0.1;
@@ -15,7 +17,7 @@ if(draw_hp_timer > 0){
 	draw_hp_timer--;	
 }
 
-if(obj_master.rpg_turn == TURN.ENEMY && !instance_exists(obj_rpg_attack)){
+if(obj_master.rpg_turn == TURN.ENEMY && !instance_exists(obj_rpg_attack) && hp > 0){
 	var attack_choice = irandom(array_length(attack_list)-1);
 	target_xscale = attack_size[attack_choice][0];
 	target_yscale = attack_size[attack_choice][1];
@@ -29,3 +31,6 @@ if(obj_master.rpg_turn == TURN.ENEMY && !instance_exists(obj_rpg_attack)){
 		instance_create_depth(x,y,1,attack_list[attack_choice]);
 	}
 }
+
+// Hover
+y += sin(current_time/200)

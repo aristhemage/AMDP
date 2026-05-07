@@ -61,21 +61,38 @@ if(reposition_rpg_player && room == rpg_room){
 	reposition_rpg_player = false;
 }
 
-if(room == rm_rpg_battle && !instance_exists(enemy_obj) && !killed){
+if(room == rm_rpg_battle && start_battle ){
 	rpg_turn_no = 0;
 	shield_health = 0;
 	instance_create_depth(room_width/2,300,1,enemy_obj);
 	instance_create_depth(room_width/2,900,1,obj_rpg_battlebox);
+	start_battle = false;
 }
 
 if(killed){
 	death_timer--;
-	if(death_timer <= 0){
-		obj_master.reposition_rpg_player = true;
-		array_push(obj_master.kill_flag,obj_master.enemy_id)
-		room_goto(obj_master.rpg_room);	
-		killed = false
-		death_timer = 90;
+	if(!obj_rpg_battlebox.show_win){
+		obj_rpg_battlebox.show_win = true;
+		obj_rpg_battlebox.show_txt = "";
+		obj_rpg_battlebox.txt_pos = 1;
+	}
+	if(keyboard_check_pressed(ord("Z")) || keyboard_check_released(vk_enter) || death_timer <= 0){
+		reposition_rpg_player = true;
+		killed = false;
+
+		array_push(kill_flag,enemy_id)
+		with(obj_cutscene_master){
+			var actions = [
+		        action_set_var(obj_fade,"fade",FADE.IN),
+		        action_wait_for_var(obj_fade,"alpha",1),
+		        action_goto_room(rm_rpg_1),
+			];
+
+			start_cutscene(actions);
+		}
+		death_timer = 150;
+	
+
 	}	
 }
 
@@ -87,4 +104,10 @@ if(room == rm_rpg_battle && rpg_turn == TURN.PLAYER  && !pause_battle){
 		button_selected = button_selected == 0 ? 1:0	
 	}
 	
+}
+
+// Debug
+
+if(keyboard_check_released(vk_end) && instance_exists(obj_rpg_attack)){
+	obj_rpg_attack.life = 1	
 }

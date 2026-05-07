@@ -12,3 +12,4 @@ txt_pos = 1;
 txt_timer = 3
 
 chose_text = false;
+show_win = false;

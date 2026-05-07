@@ -1,6 +1,6 @@
 intro_text = "SPYK comes poking in!"
 flavour_text = ["SPYK is prepping a song", "SPYK polishes their tip", multiline_string("SPYK want's to invite you to karyokee but is too mad to do so",30)];
-hp = 4;
+hp = 2;
 max_hp = hp;
 draw_hp = hp;
 draw_hp_timer = 0;

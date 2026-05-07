@@ -1,10 +1,13 @@
 
-if(obj_master.rpg_turn == TURN.PLAYER){
+if(obj_master.rpg_turn == TURN.PLAYER || show_win){
 	// Flavour text
-	if(!chose_text && obj_master.rpg_turn_no != 0){
+	if(!chose_text && obj_master.rpg_turn_no != 0 && !show_win){
 		flavour_text = obj_enemy.flavour_text[irandom(array_length(obj_enemy.flavour_text)-1)]
 		chose_text = true;
-		
+	}
+	
+	if(show_win){
+		flavour_text = "You win!"	
 	}
 	
 	//Scaling
@@ -27,4 +30,6 @@ if(obj_master.rpg_turn == TURN.PLAYER){
 	txt_pos = 1;
 	chose_text = false;
 }
+
+// show_debug_message("Final Message: " + flavour_text + " Show Message: " +show_txt )
 

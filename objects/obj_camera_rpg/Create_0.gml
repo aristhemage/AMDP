@@ -4,7 +4,7 @@ view_height = 1080/1.2;
 window_scale = 1;
 _spd = 0.09;
 
-instance_create_depth(x,y,1,obj_player_rpg_camera);
+instance_create_depth(obj_player_rpg.x,obj_player_rpg.y,1,obj_player_rpg_camera);
 _x = obj_player_rpg_camera.x;
 _y = obj_player_rpg_camera.y;
 

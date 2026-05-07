@@ -106,6 +106,7 @@
     {"id":{"name":"obj_attack_spike_drop","path":"objects/obj_attack_spike_drop/obj_attack_spike_drop.yy",},},
     {"id":{"name":"obj_attack_spike_sing","path":"objects/obj_attack_spike_sing/obj_attack_spike_sing.yy",},},
     {"id":{"name":"obj_autotiler","path":"objects/obj_autotiler/obj_autotiler.yy",},},
+    {"id":{"name":"obj_battle_spiral","path":"objects/obj_battle_spiral/obj_battle_spiral.yy",},},
     {"id":{"name":"obj_bean_bag_glitchy","path":"objects/obj_bean_bag_glitchy/obj_bean_bag_glitchy.yy",},},
     {"id":{"name":"obj_blockers","path":"objects/obj_blockers/obj_blockers.yy",},},
     {"id":{"name":"obj_box_particles","path":"objects/obj_box_particles/obj_box_particles.yy",},},

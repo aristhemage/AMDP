@@ -2,7 +2,7 @@ view_width = 1920/1.2;
 view_height = 1080/1.2;
 
 window_scale = 1;
-_spd = 0.09;
+_spd = 0.19;
 
 instance_create_depth(x,y,1,obj_player_camera);
 _x = obj_player_camera.x;

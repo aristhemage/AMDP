@@ -5,7 +5,7 @@ if(hp <= 0){
 	
 
 }
-show_debug_message(hp)
+//show_debug_message(hp)
 
 if(hp < draw_hp){
 	draw_hp -= 0.1;

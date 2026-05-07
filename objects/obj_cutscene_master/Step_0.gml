@@ -195,9 +195,10 @@ if (cutscene_active) {
 				obj_master.rpg_room = action.rpg_room;
 				obj_master.enemy_id = action.enemy_id;
 				obj_master.enemy_obj = action.obj;
+				obj_master.start_battle = true;
 				
 				//TODO: Add transition
-				room_goto(rm_rpg_battle)
+				instance_create_depth(obj_player_rpg.x,obj_player_rpg.y,-999,obj_battle_spiral);
 			
 			
 			break;
